@@ -5,7 +5,7 @@ import barlogo from '../assets/svg/bar-logo-blue.svg'
 
 function navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+    const [isloggedin, setIsloggedin] = useState(false);
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
@@ -41,7 +41,10 @@ function navbar() {
                         <Link to="/news" className="hover:text-green-600">News</Link>
                     </li>
                     <li>
-                        <Link to="/contactus" className="nav-item bg-sky-400 hover:bg-sky-300 px-4 py-1 rounded text-white animate-pulse">Contact Us</Link>
+                        {isloggedin 
+                        ? <Link to="/contactus" className="nav-item bg-sky-400 hover:bg-sky-300 px-4 py-1 rounded text-white animate-pulse">Contact Us</Link>
+                        : <Link to="/signup" className="nav-item bg-sky-400 hover:bg-sky-300 px-4 py-1 rounded text-white animate-pulse">SignUp</Link>
+                    }
                     </li>
                 </ul>
             </div>
