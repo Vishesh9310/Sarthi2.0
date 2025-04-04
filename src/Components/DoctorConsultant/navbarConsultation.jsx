@@ -1,13 +1,13 @@
 import React from 'react'
-import logo from '../assets/hospital.avif'
+import logo from '../../assets/hospital.avif'
 import { Link } from 'react-router-dom'
-import search from '../assets/svg/icons8-search.svg'
+import search from '../../assets/svg/icons8-search.svg'
 
 function navbarConsultation() {
     const brand = "Sarthi"
     return (
         <>
-            <nav className='px-20 h-fit flex justify-between bg-none border-b-1 border-white'>
+            <nav className='px-20 h-fit flex justify-between bg-black border-b-1 border-white sticky top-0'>
                 <Link to="/" className='inline-flex p-1 py-3 h-fit'>
                     <img src={logo} alt="hello" className='h-10 self-center' />
                     <div className='w-fit px-2 content-center text-start'>

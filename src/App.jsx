@@ -12,8 +12,10 @@ import Ecom from './Pages/Ecom.jsx'
 import Experience  from './Pages/Experience.jsx'
 import Signup from './Components/Signup.jsx'
 import Login from './Components/Login.jsx'
-import Zfun from './Components/zfun.jsx'
-import Showmore from './Pages/showmore_item.jsx'
+import Showmore from './Components/Ecom/showmore_item.jsx'
+import AtoCart from './Components/Ecom/addtocart.jsx'
+import Buy from './Components/Ecom/buy.jsx'
+import Details from './Components/Ecom/details.jsx'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 
 function App() {
@@ -32,9 +34,11 @@ function App() {
       { path: "/experience", element: <Experience/>},
       { path: "/signup", element: <Signup/>},
       { path: "/login", element: <Login/>},
-      { path: "/zfun", element: <Zfun/>},
       { path: "/profile", element: <Home/>},
-      { path: "/showmore", element: <Showmore/>}
+      { path: "/showmore", element: <Showmore/>},
+      { path: "/addtocart", element: <AtoCart/>},
+      { path: "/buy", element: <Buy/>},
+      { path: "/details", element: <Details/>},
     ]
   );
 

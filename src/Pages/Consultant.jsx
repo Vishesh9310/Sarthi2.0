@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import AppointmentList from "../Components/AppointmentList";
-import AppointmentForm from "../Components/AppointmentForm";
-import PrescriptionCard from "../Components/PrescriptionCard";
+import AppointmentList from "../Components/DoctorConsultant/AppointmentList";
+import AppointmentForm from "../Components/DoctorConsultant/AppointmentForm";
+import PrescriptionCard from "../Components/DoctorConsultant/PrescriptionCard";
 
-import ConsultantHealthMonitoring from "../Components/ConsultantHealthMonitoring";
+import ConsultantHealthMonitoring from "../Components/DoctorConsultant/ConsultantHealthMonitoring";
 
-import Nav from '../Components/navbarConsultation'
+import Nav from '../Components/DoctorConsultant/navbarConsultation'
 import Label from '../Components/label'
 import { Link } from 'react-router-dom'
 import Footer from '../Components/footer'
@@ -15,9 +15,6 @@ import consultant2 from '../assets/jpg/consultant2.jpg'
 import consultant3 from '../assets/png/consultant3.png'
 import consultant4 from '../assets/consultant4.webp'
 import blue from '../assets/jpg/blue.jpg'
-
-import Fitness from './Fitness'
-import Consultantform from '../Components/consultantform'
 
 function Consultant() {
 
@@ -69,8 +66,8 @@ function Consultant() {
   return (
     <>
       <main className='bg-sky-200'>
+      <Nav />
         <article className='h-fit bg-cover mb-30' style={{backgroundImage: `url(${blue})`}}>
-          <Nav />
           <div className='py-10 text-center'>
             <h1 className='text-9xl text-purple-100 font-semibold font-sans my-10 leading-snug'>Consult with Leading Healthcare <span className='bg-blue-500'>Professionals</span></h1>
             <p className='flex justify-center pb-10 gap-5'>

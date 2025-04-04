@@ -1,7 +1,11 @@
 import React from 'react'
-import img from '../assets/jpg/batsy.jpg'
+import { Link } from 'react-router-dom'
+import image from '../../assets/jpg/batsy.jpg'
+import Nav from './navbarEcom'
+import Footer from '../footer'
 
-function Item_details() {
+function details() {
+    const img = image;
     const color = "Black";
     const product_name = "K' Footlance Sneakers For Men";
     const rate = 3.6;
@@ -15,6 +19,7 @@ function Item_details() {
 
     return (
         <>
+            <Nav />
             <main className="px-10 py-10 bg-gray-100 space-y-2">
                 <div className='bg-gray-50 mx-auto mb-10 w-full h-fit p-4 shadow-lg'>
                     <img src={img} alt="K' Footlance Sneakers" className="w-full h-150 object-cover rounded-lg" />
@@ -38,8 +43,15 @@ function Item_details() {
                     {isCOD ? <p className="text-small text-gray-700 inline-flex w-full gap-2 content-center"><img src={img} alt="" className='h-5 w-5' /> Cash on Delivery Available</p> : null}
                 </div>
             </main>
+
+            <div className='w-full px-24 py-10 bg-blue-50 grid grid-cols-2 gap-10 text-center text-white font-bold'>
+                <Link to='/addtocart' className='bg-blue-300 p-5 rounded-lg hover:animate-pulse shadow-lg shadow-gray-400'>Add to Cart</Link>
+                <Link to='/buy' className='bg-blue-600 p-5 rounded-lg hover:animate-pulse shadow-lg shadow-gray-400'>Buy Now</Link>
+            </div>
+
+            <Footer/>
         </>
     )
 }
 
-export default Item_details
+export default details

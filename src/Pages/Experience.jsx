@@ -2,7 +2,7 @@ import React from 'react'
 import Nav from '../Components/navbar'
 import Footer from '../Components/footer'
 import Lable from '../Components/label'
-import Aboutdiv1 from '../Components/aboutdiv1'
+import Aboutdiv1 from '../Components/AboutPage/aboutdiv1'
 import logo1 from '../assets/jpg/logo1.jpg'
 import { Link } from 'react-router-dom'
 

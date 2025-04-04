@@ -1,5 +1,5 @@
 import React from 'react'
-import logo1 from '../assets/jpg/logo1.jpg'
+import logo1 from '../../assets/jpg/logo1.jpg'
 
 function aboutdiv1() {
   return (

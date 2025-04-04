@@ -1,16 +1,18 @@
 import React, { useState } from 'react'
-import Nav from '../Components/navbarEcom'
+import Nav from '../Components/Ecom/navbarEcom'
 import Lable from '../Components/label'
 import Footer from '../Components/footer'
 import { Link } from 'react-router-dom'
 import logo6 from '../assets/jpg/logo6.jpg'
 import cart from '../assets/png/cart.png'
 import pharma1 from '../assets/jpg/pharma1.jpg'
-import Ecom_card from '../Components/ecom_card'
 import add from '../assets/svg/icons8-plus.svg'
 import minus from '../assets/png/minus.png'
 import genuine from '../assets/jpg/genuine.jpg'
 import doorstep from '../assets/jpg/doorsteps.jpg'
+import Firstdiv from '../Components/Ecom/firstdiv'
+import Ecom_card from '../Components/Ecom/ecom_card'
+import Featuredbrand from '../Components/Ecom/featuredbrand'
 
 function Ecom() {
   const [showAnimation, setshowAnimation] = useState(true);
@@ -62,30 +64,12 @@ function Ecom() {
 
           <div className='bg-white rounded-t-4xl h-fit'>
             <div className='bg-none grid grid-cols-6 p-14'>
-              <div className='text-center p-3'>
-                <img className='rounded-3xl' src={cart} alt="" />
-                <h5>Bone & Joint Care</h5>
-              </div>
-              <div className='text-center p-3'>
-                <img className='rounded-3xl' src={cart} alt="" />
-                <h5>Diabetes Care</h5>
-              </div>
-              <div className='text-center p-3'>
-                <img className='rounded-3xl' src={cart} alt="" />
-                <h5>Kidney Care</h5>
-              </div>
-              <div className='text-center p-3'>
-                <img className='rounded-3xl' src={cart} alt="" />
-                <h5>Liver Care</h5>
-              </div>
-              <div className='text-center p-3'>
-                <img className='rounded-3xl' src={cart} alt="" />
-                <h5>Respiratory Care</h5>
-              </div>
-              <div className='text-center p-3'>
-                <img className='rounded-3xl' src={cart} alt="" />
-                <h5>Eye Care</h5>
-              </div>
+              <Firstdiv name="Bone & Joint Care" img={cart} />
+              <Firstdiv name="Diabetes Care" img={cart} />
+              <Firstdiv name="Kidney Care" img={cart} />
+              <Firstdiv name="Liver Care" img={cart} />
+              <Firstdiv name="Respiratory Care" img={cart} />
+              <Firstdiv name="Eye Care" img={cart} />
             </div>
 
             <div className='px-24 py-10'>
@@ -95,10 +79,10 @@ function Ecom() {
               </div>
 
               <div className='grid grid-cols-4 mt-5'>
-                <Ecom_card />
-                <Ecom_card />
-                <Ecom_card />
-                <Ecom_card />
+                <Ecom_card title="Healthcare" desc="Nitrile diposable gloves 100" price="89" newprice="78" />
+                <Ecom_card title="Healthcare" desc="Nitrile diposable gloves 100" price="89" newprice="78" />
+                <Ecom_card title="Healthcare" desc="Nitrile diposable gloves 100" price="89" newprice="78" />
+                <Ecom_card title="Healthcare" desc="Nitrile diposable gloves 100" price="89" newprice="78" />
               </div>
 
               <div className='grid grid-cols-2 gap-5 py-20'>
@@ -112,7 +96,7 @@ function Ecom() {
                 </div>
                 <div className='bg-orange-200 rounded-4xl p-8'>
                   <div className='w-full h-52 content-center'>
-                    <h3 className='text-3xl font-bold pb-5 w-1/3'>Don't have a Prscription?</h3>
+                    <h3 className='text-3xl font-bold pb-5 w-1/3'>Don't have a Perscription?</h3>
                     <p className='font-bold w-1/2'>Upload only .jpg .png  or .pdf files size limit 15MB</p>
                   </div>
                   <div className='inline-flex pt-8'>
@@ -122,42 +106,17 @@ function Ecom() {
                 </div>
               </div>
 
-              <div className='flex justify-between'>
-                <h1 className='text-4xl font-bold w-1/4 text-sky-600'>Featured Brands</h1>
-                <Link to='/showmore' className='font-bold'>SEE ALL &rarr;</Link>
-              </div>
-
+              <h1 className='text-4xl font-bold w-1/4 text-sky-600'>Featured Brands</h1>
+              
               <div className='grid grid-cols-7'>
-                <div className='text-center py-10'>
-                  <img src={pharma1} alt="" className='bg-pink-300 rounded-[100%] h-40 w-40' />
-                  <h2 className='font-bold'>GSk</h2>
-                </div>
-                <div className='text-center py-10'>
-                  <img src={pharma1} alt="" className='bg-pink-300 rounded-[100%] h-40 w-40' />
-                  <h2 className='font-bold'>GSk</h2>
-                </div>
-                <div className='text-center py-10'>
-                  <img src={pharma1} alt="" className='bg-pink-300 rounded-[100%] h-40 w-40' />
-                  <h2 className='font-bold'>GSk</h2>
-                </div>
-                <div className='text-center py-10'>
-                  <img src={pharma1} alt="" className='bg-pink-300 rounded-[100%] h-40 w-40' />
-                  <h2 className='font-bold'>GSk</h2>
-                </div>
-                <div className='text-center py-10'>
-                  <img src={pharma1} alt="" className='bg-pink-300 rounded-[100%] h-40 w-40' />
-                  <h2 className='font-bold'>GSk</h2>
-                </div>
-                <div className='text-center py-10'>
-                  <img src={pharma1} alt="" className='bg-pink-300 rounded-[100%] h-40 w-40' />
-                  <h2 className='font-bold'>GSk</h2>
-                </div>
-                <div className='text-center py-10'>
-                  <img src={pharma1} alt="" className='bg-pink-300 rounded-[100%] h-40 w-40' />
-                  <h2 className='font-bold'>GSk</h2>
-                </div>
+                <Featuredbrand img={pharma1} brand="Cipla" />
+                <Featuredbrand img={pharma1} brand="Cipla" />
+                <Featuredbrand img={pharma1} brand="Cipla" />
+                <Featuredbrand img={pharma1} brand="Cipla" />
+                <Featuredbrand img={pharma1} brand="Cipla" />
+                <Featuredbrand img={pharma1} brand="Cipla" />
+                <Featuredbrand img={pharma1} brand="Cipla" />
               </div>
-
 
               <div className='flex justify-between'>
                 <h1 className='text-4xl font-bold w-1/4 text-sky-600'>Trending Products for You!</h1>
@@ -165,14 +124,14 @@ function Ecom() {
               </div>
 
               <div className='grid grid-cols-4 mt-5'>
-                <Ecom_card />
-                <Ecom_card />
-                <Ecom_card />
-                <Ecom_card />
-                <Ecom_card />
-                <Ecom_card />
-                <Ecom_card />
-                <Ecom_card />
+                <Ecom_card title="Healthcare" desc="Nitrile diposable gloves 100" price="89" newprice="78" />
+                <Ecom_card title="Healthcare" desc="Nitrile diposable gloves 100" price="89" newprice="78" />
+                <Ecom_card title="Healthcare" desc="Nitrile diposable gloves 100" price="89" newprice="78" />
+                <Ecom_card title="Healthcare" desc="Nitrile diposable gloves 100" price="89" newprice="78" />
+                <Ecom_card title="Healthcare" desc="Nitrile diposable gloves 100" price="89" newprice="78" />
+                <Ecom_card title="Healthcare" desc="Nitrile diposable gloves 100" price="89" newprice="78" />
+                <Ecom_card title="Healthcare" desc="Nitrile diposable gloves 100" price="89" newprice="78" />
+                <Ecom_card title="Healthcare" desc="Nitrile diposable gloves 100" price="89" newprice="78" />
               </div>
 
               <div className='grid grid-cols-3 gap-10 p-6'>
@@ -201,10 +160,10 @@ function Ecom() {
               </div>
 
               <div className='grid grid-cols-4 mt-5'>
-                <Ecom_card />
-                <Ecom_card />
-                <Ecom_card />
-                <Ecom_card />
+                <Ecom_card title="Healthcare" desc="Nitrile diposable gloves 100" price="89" newprice="78" />
+                <Ecom_card title="Healthcare" desc="Nitrile diposable gloves 100" price="89" newprice="78" />
+                <Ecom_card title="Healthcare" desc="Nitrile diposable gloves 100" price="89" newprice="78" />
+                <Ecom_card title="Healthcare" desc="Nitrile diposable gloves 100" price="89" newprice="78" />
               </div>
 
               <div className='w-full my-10 bg-cyan-200 rounded-t-4xl pt-6'>
@@ -265,40 +224,40 @@ function Ecom() {
           <div className='bg-gray-200 p-6 my-3 rounded-2xl flex justify-between' onClick={() => { showmore() }}>
             <h3 className='text-lg font-semibold'>How do I start online consulation with doctors on Medicare?</h3>
             <div onClick={showmore} className='w-fit h-fit'>
-              {isVisible ?  <img src={minus} alt="" className='self-center h-8 w-8 rounded-[100%]'/> : <img src={add} alt="" className='self-center h-8 w-8 rounded-[100%]'/>}
-           </div>
+              {isVisible ? <img src={minus} alt="" className='self-center h-8 w-8 rounded-[100%]' /> : <img src={add} alt="" className='self-center h-8 w-8 rounded-[100%]' />}
+            </div>
           </div>
           {isVisible && <div className='bg-green-200 rounded-4xl p-5'>This div is now visible.</div>}
 
           <div className='bg-gray-200 p-6 my-3 rounded-2xl flex justify-between'>
             <h3 className='text-lg font-semibold'>Are your online doctors qualified?</h3>
             <div onClick={showmore2} className='w-fit h-fit'>
-              {isVisible2 ?  <img src={minus} alt="" className='self-center h-8 w-8 rounded-[100%]'/> : <img src={add} alt="" className='self-center h-8 w-8 rounded-[100%]'/>}
-           </div>
+              {isVisible2 ? <img src={minus} alt="" className='self-center h-8 w-8 rounded-[100%]' /> : <img src={add} alt="" className='self-center h-8 w-8 rounded-[100%]' />}
+            </div>
           </div>
           {isVisible2 && <div className='bg-green-200 rounded-4xl p-5'>hello vishesh</div>}
-          
+
           <div className='bg-gray-200 p-6 my-3 rounded-2xl flex justify-between'>
             <h3 className='text-lg font-semibold'>Is online doctor consultation safe and secured on Medicare?</h3>
             <div onClick={showmore3} className='w-fit h-fit'>
-              {isVisible3 ?  <img src={minus} alt="" className='self-center h-8 w-8 rounded-[100%]'/> : <img src={add} alt="" className='self-center h-8 w-8 rounded-[100%]'/>}
-           </div>
+              {isVisible3 ? <img src={minus} alt="" className='self-center h-8 w-8 rounded-[100%]' /> : <img src={add} alt="" className='self-center h-8 w-8 rounded-[100%]' />}
+            </div>
           </div>
           {isVisible3 && <div className='bg-green-200 rounded-4xl p-5'>This div is now visible.</div>}
 
           <div className='bg-gray-200 p-6 my-3 rounded-2xl flex justify-between'>
             <h3 className='text-lg font-semibold'>What happens if I don't get a response from a doctor?</h3>
             <div onClick={showmore4} className='w-fit h-fit'>
-              {isVisible4 ?  <img src={minus} alt="" className='self-center h-8 w-8 rounded-[100%]'/> : <img src={add} alt="" className='self-center h-8 w-8 rounded-[100%]'/>}
-           </div>
+              {isVisible4 ? <img src={minus} alt="" className='self-center h-8 w-8 rounded-[100%]' /> : <img src={add} alt="" className='self-center h-8 w-8 rounded-[100%]' />}
+            </div>
           </div>
           {isVisible4 && <div className='bg-green-200 rounded-4xl p-5'>This div is now visible.</div>}
 
           <div className='bg-gray-200 p-6 my-3 rounded-2xl flex justify-between'>
             <h3 className='text-lg font-semibold'>Can I do a free online doctor consultation on Medicare?</h3>
             <div onClick={showmore5} className='w-fit h-fit'>
-              {isVisible5 ?  <img src={minus} alt="" className='self-center h-8 w-8 rounded-[100%]'/> : <img src={add} alt="" className='self-center h-8 w-8 rounded-[100%]'/>}
-           </div>
+              {isVisible5 ? <img src={minus} alt="" className='self-center h-8 w-8 rounded-[100%]' /> : <img src={add} alt="" className='self-center h-8 w-8 rounded-[100%]' />}
+            </div>
           </div>
           {isVisible5 && <div className='bg-green-200 rounded-4xl p-5'>This div is now visible.</div>}
 

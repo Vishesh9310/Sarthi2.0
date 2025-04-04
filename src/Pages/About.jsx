@@ -2,7 +2,7 @@ import React from 'react'
 import Nav from '../Components/navbar'
 import Label from '../Components/label'
 import Footer from '../Components/footer'
-import Aboutdiv1 from '../Components/aboutdiv1'
+import Aboutdiv1 from '../Components/AboutPage/aboutdiv1'
 import logo1 from '../assets/jpg/logo1.jpg'
 import doctorface from '../assets/jpg/doctor_face2.jpg'
 import { Link } from 'react-router-dom'
@@ -107,8 +107,8 @@ function About() {
                     <p>
                         {address} {location} {state} {pincode} <br />
                         Email: <Link to="https://accounts.google.com" className='text-blue-600' href="#email">{email}</Link> <br />
-                        Phone No: <Link to="/zfun" className='text-blue-600' href="#tel">{tel} </Link><br />
-                        Emergency Contact No: <Link to="/zfun" className='text-blue-600' href="#emer_call">{emer_call}</Link>
+                        Phone No: {tel}<br />
+                        Emergency Contact No: {emer_call}
                     </p>
                 </div>
             </section>

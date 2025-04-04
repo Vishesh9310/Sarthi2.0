@@ -8,7 +8,6 @@ import shopping from '../assets/png/cart.png'
 import nurshing_care from '../assets/png/nurse.png'
 import Label from '../Components/label'
 import {Link} from 'react-router-dom'
-import Payment from './Payment'
 
 function Home() {
     const brandname = "Sarthi";
@@ -17,7 +16,6 @@ function Home() {
     
     return (
         <>
-            <Payment/>
             <Nav/>
             <section className='bg-sky-200 h-fit pb-40'>
                 <div className='px-24 pb-26'>

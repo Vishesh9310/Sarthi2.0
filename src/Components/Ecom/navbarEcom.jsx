@@ -1,11 +1,13 @@
-import React from 'react'
-import logo from '../assets/hospital.avif'
+import React, {useState} from 'react'
+import logo from '../../assets/hospital.avif'
 import { Link } from 'react-router-dom'
 
 function navbarEcom() {
     const brand = "Sarthi";
+    const [isloggedin, setIsloggedin] = useState(false);
+    
     return (
-        <nav className='inline-flex justify-between w-full px-10 h-20 bg-blue-100 text-sky-600'>
+        <nav className='inline-flex justify-between w-full px-10 h-fit bg-blue-100 text-sky-600 sticky top-0'>
             <Link to="/" className='inline-flex py-1 px-14'>
                 <img src={logo} alt="hello" className='h-14 self-center' />
                 <div className='w-fit px-2 content-center'>
@@ -20,7 +22,10 @@ function navbarEcom() {
                     <Link to="/service" className="hover:text-green-600">Services</Link>
                     <Link to="/gallery" className="hover:text-green-600">Gallery</Link>
                     <Link to="/news" className="hover:text-green-600">News</Link>
-                    <Link to="/signup" className="text-black hover:text-orange-600 px-4 py-1 rounded">Sign Up</Link>
+                    {isloggedin 
+                    ? null
+                    : <Link to="/signup" className="text-black hover:text-orange-600 px-4 py-1 rounded">Sign Up</Link>
+                }
                 </ul>
             </div>
         </nav>
