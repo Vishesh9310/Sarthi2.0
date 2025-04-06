@@ -8,7 +8,7 @@ nhi aana chhiye.
 le lene k liye like- usko kya symptoms h kaisa feel ho rha h 
 or agr user sure nhi h ki kya bimari h to wo bhi ik option hona chhiye
 
-3. Sir payment integrate krne ko kaha tha Raserpay se
+3. Sir payment integrate krne ko kaha tha Razorpay se
 
 4. Sir ne firebase use krne ko bola tha Jo main notification 
 wale api k liye waise v use krungi hi to y tumhara kam nhi h ❌

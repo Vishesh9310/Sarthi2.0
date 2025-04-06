@@ -1,11 +1,38 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Nav from './navbarEcom'
 import Footer from '../footer'
+import img from '../../assets/jpg/capsule.jpg'
 
 function buy() {
+    const [instock, setInstock] = useState(true);
+    const [itemcount, setItemCount] = useState(1);
+    const img2 = img;
+    const title = "fish oil capsule"
+    const desc = "hello";
+    const company = "hindustan unilever";
     return (
         <>
             <Nav />
+            
+            <section className='px-10 inline-flex justify-between w-full'>
+                <div className='w-2/3 bg-pink-400 p-5'>
+                <>
+                <div>
+                    <img src={img2} alt="" className='h-20 w-28'/>
+                    <div>
+                        <h1>{title}</h1>
+                        <p>{desc} <br />{company}</p>
+                    </div>
+                    <div>
+                        {instock ? <span className='text-green-600 font-bold'>In Stock</span> : <span className='text-red-600 font-bold'>Not In Stock</span>}
+                        <button onClick={(itemcount)=>setItemCount(itemcount.target.value = parseInt(itemcount.target.value) + 1)}>{itemcount}</button>
+                    </div>
+
+                </div>
+                </>
+                </div>
+                <div className='w-1/3 bg-sky-400 p-5'>hello</div>
+            </section>
             
             <div className="bg-gray-100 min-h-screen p-6">
                 <div className="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">

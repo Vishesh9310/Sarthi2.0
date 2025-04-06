@@ -118,61 +118,47 @@ function Consultant() {
             </div>
           </div>
 
-          </article>
+        </article>
+
+        <section className="px-24 space-y-20">
+          {/* Doctor Timetable */}
+          <div className="bg-sky-500 pb-10 text-white">
+            <h1 className="px-5 text-2xl bg-white p-3 text-black">Doctors' Timetable</h1>
+            <div className="inline-flex flex-col sm:flex-row w-full p-5 ml-5">
+              <div className="sm:w-1/2 p-5">
+                <h2 className="py-10">View a timetable showing when our doctors are usually available.</h2>
+              </div>
+              <div className="sm:w-1/2 p-5">
+                <p className="flex w-full justify-between border-b-2 border-white py-3">
+                  <h3>Weekdays</h3> <span>8.00-8.00</span>
+                </p>
+                <p className="flex w-full justify-between border-b-2 border-white py-3">
+                  <h3>Saturday</h3> <span>9.30-5.30</span>
+                </p>
+                <p className="flex w-full justify-between py-3">
+                  <h3>Sunday</h3> <span>9.30-3.00</span>
+                </p>
+              </div>
+            </div>
+          </div>
 
           {/* Book & Manage Appointments */}
           <div className="h-fit bg-sky-200 p-8">
             <div className="max-w-4xl mx-auto bg-sky-100 p-6 rounded-lg shadow-2xl mb-10 shadow-sky-300">
               <h1 className="text-3xl font-bold text-center mb-6">Appointment Booking</h1>
-              {!isBooking ? (
-                <>
-                  <button
-                    onClick={() => setIsBooking(true)}
-                    className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 mb-4"
-                  >
-                    Book an Appointment
-                  </button>
-                  <AppointmentList
-                    appointments={appointments}
-                    onCancelAppointment={handleCancelAppointment}
-                  />
-                </>
-              ) : (
-                <AppointmentForm onAddAppointment={handleAddAppointment} />
-              )}
+              {!isBooking 
+              ? (<>
+                  <button onClick={() => setIsBooking(true)} className="w-full bg-blue-400 text-white py-2 rounded-lg hover:bg-blue-600 mb-4">Book an Appointment</button>
+                  <AppointmentList appointments={appointments} onCancelAppointment={handleCancelAppointment}/>
+                </>) 
+              : (<AppointmentForm onAddAppointment={handleAddAppointment} />)}
             </div>
           </div>
+        </section>
 
-          {/* E-Precriptions */}
-          <div className="App min-h-fit py-20 bg-sky-200 p-8">
-            <div className="max-w-4xl mx-auto bg-purple-50 rounded-4xl p-6 shadow-2xl shadow-purple-200">
-              {/* <PrescriptionForm onAddPrescription={handleAddPrescription} /*/}
-              <h1 className="text-2xl font-semibold mb-4">Create a Prescription</h1>
-              <div className='h-fit w-full p-10 my-10'>
-              <form className='w-full mr-30 space-y-10' onSubmit={handleSubmit}>
-                <input type="text"value={patientName} onChange={(e) => setPatientName(e.target.value)} required className='w-full rounded-md outline-none bg-white p-5' placeholder='Patient Name' />
-                <input type="text" value={medication} onChange={(e) => setMedication(e.target.value)} required className='w-full rounded-md outline-none bg-white p-5 ' placeholder='Medicine' />
-                <input type="text" value={dosage} onChange={(e) => setDosage(e.target.value)} required className='w-full rounded-md outline-none bg-white p-5' placeholder='Dosage' />
-                <input type="text" className='w-full rounded-md outline-none bg-white p-5' placeholder='Duration' />
-                <input type="submit" value={submit} onChange={(e) => setDuration(e.target.value)} required className='text-amber-50 text-center w-40 rounded-md outline-none bg-gradient-to-l to-orange-400 from-pink-500 p-2 my-5 hover:animate-pulse'/>
-                </form>
-              </div>
-              {/* <PrescriptionList prescriptions={prescriptions} /> */}
-              <div className="mt-6">
-                <h2 className="text-xl font-semibold">Prescription List</h2>
-                {prescriptions.length === 0 ? (
-                  <p className="text-gray-500 mt-2">No prescriptions available.</p>
-                ) : (
-                  <div className="space-y-4 mt-4">
-                    {prescriptions.map((prescription) => (
-                      <PrescriptionCard key={prescription.id} prescription={prescription} />
-                    ))}
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
-
+          {/* E-Precriptions 
+          it is for admin panel*/}
+          
           {/* Medical Reacords & History */}
           {/* Payment Gateway Integration */}
 
@@ -181,67 +167,6 @@ function Consultant() {
           {/* Emergency Consultation */}
           {/* Reminders & Notifications */}
           {/* Review & Ratings */}
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 px-6 sm:px-12 md:px-24 py-10">
-
-          <div className="bg-sky-500 pb-10 text-white">
-            <h1 className="px-5 text-2xl bg-white p-3 text-black">Doctors' Timetable</h1>
-            <div className="inline-flex flex-col sm:flex-row w-full p-5 ml-5">
-              <div className="sm:w-1/2 p-5">
-                <h2 className="py-10">View a timetable showing when our doctors are usually available.</h2>
-                <Link
-                  to="/login"
-                  className="w-fit bg-sky-400 text-white hover:bg-sky-300 px-5 py-1 mt-5 mr-5"
-                >
-                  MAKE AN APPOINTMENT
-                </Link>
-              </div>
-              <div className="sm:w-1/2 p-5">
-                <p className="flex w-full justify-between border-b-2 border-white py-3">
-                  <h3>Weekdays</h3> <span>8.00-20.00</span>
-                </p>
-                <p className="flex w-full justify-between border-b-2 border-white py-3">
-                  <h3>Saturday</h3> <span>9.30-17.30</span>
-                </p>
-                <p className="flex w-full justify-between py-3">
-                  <h3>Sunday</h3> <span>9.30-15.00</span>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Make an Appointment Section */}
-          <div className="bg-sky-500">
-            <h1 className="px-5 text-2xl bg-white p-3">Make an Appointment</h1>
-            <div className="inline-flex w-full px-5 pb-5 pt-5">
-              <form action="" className="flex flex-col sm:flex-row w-full">
-                <div className="p-5 sm:w-1/2">
-                  <input
-                    type="text"
-                    placeholder="Enter Name"
-                    className="outline-none w-full bg-white hover:bg-sky-100 px-5 py-1 mt-5"
-                  />
-                  <input
-                    type="tel"
-                    placeholder="Phone"
-                    className="w-full outline-none bg-white hover:bg-sky-100 px-5 py-1 mt-5"
-                  />
-                </div>
-                <div className="p-5 sm:w-1/2">
-                  <input
-                    type="email"
-                    placeholder="E-mail"
-                    className="w-full outline-none bg-white hover:bg-sky-100 px-5 py-1 mt-5"
-                  />
-                  <input
-                    type="submit"
-                    className="w-full bg-sky-400 text-white hover:bg-sky-300 px-5 py-1 mt-5 mr-5"
-                  />
-                </div>
-              </form>
-            </div>
-          </div>
-          </div>
 
         <Label />
         
@@ -337,3 +262,32 @@ export default Consultant
 //       </div>
 //     </div>
 //   </div>
+
+// {/* <div className="App min-h-fit py-20 bg-sky-200 p-8">
+//             <div className="max-w-4xl mx-auto bg-purple-50 rounded-4xl p-6 shadow-2xl shadow-purple-200">
+//               {/* <PrescriptionForm onAddPrescription={handleAddPrescription} /*/}
+//               <h1 className="text-2xl font-semibold mb-4">Create a Prescription</h1>
+//               <div className='h-fit w-full p-10 my-10'>
+//               <form className='w-full mr-30 space-y-10' onSubmit={handleSubmit}>
+//                 <input type="text"value={patientName} onChange={(e) => setPatientName(e.target.value)} required className='w-full rounded-md outline-none bg-white p-5' placeholder='Patient Name' />
+//                 <input type="text" value={medication} onChange={(e) => setMedication(e.target.value)} required className='w-full rounded-md outline-none bg-white p-5 ' placeholder='Medicine' />
+//                 <input type="text" value={dosage} onChange={(e) => setDosage(e.target.value)} required className='w-full rounded-md outline-none bg-white p-5' placeholder='Dosage' />
+//                 <input type="text" className='w-full rounded-md outline-none bg-white p-5' placeholder='Duration' />
+//                 <input type="submit" value={submit} onChange={(e) => setDuration(e.target.value)} required className='text-amber-50 text-center w-40 rounded-md outline-none bg-gradient-to-l to-orange-400 from-pink-500 p-2 my-5 hover:animate-pulse'/>
+//                 </form>
+//               </div>
+//               {/* <PrescriptionList prescriptions={prescriptions} /> */}
+//               <div className="mt-6">
+//                 <h2 className="text-xl font-semibold">Prescription List</h2>
+//                 {prescriptions.length === 0 ? (
+//                   <p className="text-gray-500 mt-2">No prescriptions available.</p>
+//                 ) : (
+//                   <div className="space-y-4 mt-4">
+//                     {prescriptions.map((prescription) => (
+//                       <PrescriptionCard key={prescription.id} prescription={prescription} />
+//                     ))}
+//                   </div>
+//                 )}
+//               </div>
+//             </div>
+//           </div>  */}

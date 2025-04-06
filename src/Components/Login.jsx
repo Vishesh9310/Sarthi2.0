@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Nav from '../Components/navbar'
 import Footer from '../Components/footer'
 import logo from '../assets/hospital.avif'
@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 
 function Login(props) {
   let brandname = props.info.brand;
+
   return (
     <>
       <Nav />
