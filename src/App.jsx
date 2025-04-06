@@ -1,4 +1,4 @@
-import React  from 'react'
+import React, { useState }  from 'react'
 import './App.css'
 import Home from './Pages/Home.jsx'
 import About from './Pages/About.jsx'
@@ -20,25 +20,39 @@ import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 
 function App() {
 
+  const [isloggedin, setIsloggedin] = useState(true);
+
+  const basicinfo = {
+    brand: "Sarthi",
+    logged: isloggedin,
+    location : "Noida",
+    address : "E2, Block e, sector-26",
+    state : "Uttar-Pradesh",
+    pincode : 201301,
+    tel : 645323,
+    email : "sarthi@gmail.com",
+    emer_call : 34532345432,
+  }
+
   const router = createBrowserRouter(
     [
-      { path: "/", element: <Home /> },
-      { path: "/about", element: <About /> },
-      { path: "/service", element: <Services /> },
-      { path: "/gallery", element: <Gallery /> },
-      { path: "/news", element: <News /> },
-      { path: "/contactus", element: <ContactUs /> },
+      { path: "/", element: <Home info = {basicinfo} /> },
+      { path: "/about", element: <About info = {basicinfo} /> },
+      { path: "/service", element: <Services info = {basicinfo} /> },
+      { path: "/gallery", element: <Gallery info = {basicinfo} /> },
+      { path: "/news", element: <News info = {basicinfo} /> },
+      { path: "/contactus", element: <ContactUs info = {basicinfo} /> },
       { path: "/fitness", element: <Tracker/>},
       { path: "/consultant", element: <Consultant/>},
-      { path: "/ecom", element: <Ecom/>},
-      { path: "/experience", element: <Experience/>},
-      { path: "/signup", element: <Signup/>},
-      { path: "/login", element: <Login/>},
-      { path: "/profile", element: <Home/>},
-      { path: "/showmore", element: <Showmore/>},
-      { path: "/addtocart", element: <AtoCart/>},
-      { path: "/buy", element: <Buy/>},
-      { path: "/details", element: <Details/>},
+      { path: "/ecom", element: <Ecom info = {basicinfo} />},
+      { path: "/experience", element: <Experience info = {basicinfo} />},
+      { path: "/signup", element: <Signup info = {basicinfo} />},
+      { path: "/login", element: <Login info = {basicinfo} />},
+      { path: "/profile", element: <Home info = {basicinfo} />},
+      { path: "/showmore", element: <Showmore info = {basicinfo} />},
+      { path: "/addtocart", element: <AtoCart info = {basicinfo} />},
+      { path: "/buy", element: <Buy info = {basicinfo} />},
+      { path: "/details", element: <Details info = {basicinfo} />},
     ]
   );
 

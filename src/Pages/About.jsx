@@ -7,16 +7,15 @@ import logo1 from '../assets/jpg/logo1.jpg'
 import doctorface from '../assets/jpg/doctor_face2.jpg'
 import { Link } from 'react-router-dom'
 
-function About() {
-    const brandname = "Sarthi";
-
-    const location = "Noida";
-    const address = "E2, Block e, sector-26";
-    const state = "Uttar-Pradesh";
-    const pincode = 201301;
-    const tel = 645323;
-    const email = "sarthi@gmail.com";
-    const emer_call = 34532345432;
+function About(props) {
+    const brandname = props.info.brand;
+    const location = props.info.location;
+    const address = props.info.address;
+    const state = props.info.state;
+    const pincode = props.info.pincode;
+    const tel = props.info.tel;
+    const email = props.info.email;
+    const emer_call = props.info.emer_call;
 
     const logo = logo1;
     const star_data = [["500", "bed facility"], ["265", "Doctor"], ["633", "Trained Straff"], ["30", "Specialities"]];

@@ -1,93 +1,111 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Nav from '../Components/navbar';
 import Footer from '../Components/footer';
 import Label from '../Components/label';
 import { Link } from 'react-router-dom';
+import doctor from '../assets/png/consultant3.png'
 import doctorface from '../assets/jpg/doctor_face2.jpg';
+import capsule from '../assets/jpg/capsule.jpg'
+import capsule2 from '../assets/jpg/capsule2.jpg'
+import instru1 from '../assets/jpg/instru1.jpg'
+import surgrey from '../assets/jpg/surgrey.jpg'
+import consultant from '../assets/jpg/consultant2.jpg'
+import consultant2 from '../assets/consultant8.webp'
 
-function ContactUs() {
+
+function ContactUs(props) {
+  const isloggedin = props.info.logged;
+  const [isvisible, setisvisible] = useState(false);
+
+  const obj1 = {img: capsule ,text:"hello" ,desc: "hello"};
+  const obj2 = {img: capsule2 ,text:"hello" ,desc: "hello"};
+  const obj3 = {img: instru1 ,text:"hello" ,desc: "hello"};
+  const obj4 = {img: consultant ,text:"hello" ,desc: "hello"};
+  const obj5 = {img: surgrey ,text:"hello" ,desc: "hello"};
+  const obj6 = {img: consultant2 ,text:"hello" ,desc: "hello"};
+
+    const brandname = props.info.brand;
+    const location = props.info.location;
+    const address = props.info.address;
+    const state = props.info.state;
+    const pincode = props.info.pincode;
+    const tel = props.info.tel;
+    const email = props.info.email;
+    const emer_call = props.info.emer_call;
+
+  function showmore() {
+    setisvisible(!isvisible);
+  }
+
   return (
     <>
       <Nav />
 
       <section className="bg-sky-200">
-        <div
-          className="px-6 sm:px-12 md:px-24 pb-26 bg-cover bg-center"
-          style={{ backgroundImage: `url(${doctorface})` }}
-        >
-          <div className="w-full md:w-1/2 h-fit py-20 pl-6 md:pl-40 text-white">
-            <p className="leading-loose pt-3">Individual approach to each patient</p>
-            <p className="font-bold text-3xl sm:text-4xl md:text-6xl pt-2 mb-5">Medical Service</p>
-            <Link
-              to="/signup"
-              className="w-fit bg-sky-400 text-white hover:bg-sky-300 px-5 py-2 mt-10 mr-5"
-            >
-              MAKE AN APPOINTMENT
-            </Link>
+        <div className="px-6 sm:px-12 md:px-24 pb-26 bg-cover bg-center" style={{ backgroundImage: `url(${doctorface})` }}>
+          <div className="w-full md:w-1/2 h-fit py-20 pl-6 md:pl-40 text-white space-y-3">
+            <p className="leading-loose">Individual approach to each patient</p>
+            <p className="font-bold text-3xl sm:text-4xl md:text-6xl pb-5">Medical Service</p>
+            <Link to="/consultant" className='bg-blue-500 p-2'>Book An Appointment</Link>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 px-6 sm:px-12 md:px-24 py-10">
-
-          <div className="bg-sky-500 pb-10 text-white">
-            <h1 className="px-5 text-2xl bg-white p-3 text-black">Doctors' Timetable</h1>
-            <div className="inline-flex flex-col sm:flex-row w-full p-5 ml-5">
-              <div className="sm:w-1/2 p-5">
-                <h2 className="py-10">View a timetable showing when our doctors are usually available.</h2>
-                <Link
-                  to="/signup"
-                  className="w-fit bg-sky-400 text-white hover:bg-sky-300 px-5 py-1 mt-5 mr-5"
-                >
-                  MAKE AN APPOINTMENT
-                </Link>
-              </div>
-              <div className="sm:w-1/2 p-5">
-                <p className="flex w-full justify-between border-b-2 border-white py-3">
-                  <h3>Weekdays</h3> <span>8.00-20.00</span>
-                </p>
-                <p className="flex w-full justify-between border-b-2 border-white py-3">
-                  <h3>Saturday</h3> <span>9.30-17.30</span>
-                </p>
-                <p className="flex w-full justify-between py-3">
-                  <h3>Sunday</h3> <span>9.30-15.00</span>
-                </p>
-              </div>
-            </div>
+        <div className='grid grid-cols-2 px-24 bg-gradient-to-l from-blue-200 to-sky-100'>
+          <img src={doctor} alt="" className='' />
+          <div className='py-10 px-5 space-y-5'>
+            <h1 className="text-3xl font-bold">What Makes Us Different</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum pariatur, doloribus beatae vitae officia sed quisquam voluptate, perspiciatis qui dolor laboriosam eos perferendis ratione ullam sequi deleniti ea nobis quidem.</p>
+            {isvisible && <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta laboriosam officiis nobis blanditiis fuga expedita voluptatem tenetur qui dolor sequi eum eius rerum repellendus praesentium cumque, pariatur quidem. Tempora, veritatis.</p>}
+            <button onClick={showmore} className='text-blue-600'>{isvisible ? "Show less" : "Show more"}</button>
           </div>
-
-          {/* Make an Appointment Section */}
-          <div className="bg-sky-500">
-            <h1 className="px-5 text-2xl bg-white p-3">Make an Appointment</h1>
-            <div className="inline-flex w-full px-5 pb-5 pt-5">
-              <form action="" className="flex flex-col sm:flex-row w-full">
-                <div className="p-5 sm:w-1/2">
-                  <input
-                    type="text"
-                    placeholder="Enter Name"
-                    className="outline-none w-full bg-white hover:bg-sky-100 px-5 py-1 mt-5"
-                  />
-                  <input
-                    type="tel"
-                    placeholder="Phone"
-                    className="w-full outline-none bg-white hover:bg-sky-100 px-5 py-1 mt-5"
-                  />
-                </div>
-                <div className="p-5 sm:w-1/2">
-                  <input
-                    type="email"
-                    placeholder="E-mail"
-                    className="w-full outline-none bg-white hover:bg-sky-100 px-5 py-1 mt-5"
-                  />
-                  <input
-                    type="submit"
-                    className="w-full bg-sky-400 text-white hover:bg-sky-300 px-5 py-1 mt-5 mr-5"
-                  />
-                </div>
-              </form>
-            </div>
-          </div>
-
         </div>
+
+        <div className='grid grid-cols-3 px-24 py-10'>
+          <div className='text-center overflow-hidden rounded-lg p-5'>
+            <img src={obj1.img} alt="" className='content-center rounded-lg h-60 w-full' />
+            <h1>{obj1.text}</h1>
+            <h4>{obj1.desc}</h4>
+          </div>
+          <div className='text-center overflow-hidden rounded-lg p-5'>
+            <img src={obj2.img} alt="" className='content-center rounded-lg h-60 w-full' />
+            <h1>{obj2.text}</h1>
+            <h4>{obj2.desc}</h4>
+          </div>
+          <div className='text-center overflow-hidden rounded-lg p-5'>
+            <img src={obj3.img} alt="" className='content-center rounded-lg h-60 w-full' />
+            <h1>{obj3.text}</h1>
+            <h4>{obj3.desc}</h4>
+          </div>
+          <div className='text-center overflow-hidden rounded-lg p-5'>
+            <img src={obj4.img} alt="" className='content-center rounded-lg h-60 w-full' />
+            <h1>{obj4.text}</h1>
+            <h4>{obj4.desc}</h4>
+          </div>
+          <div className='text-center overflow-hidden rounded-lg p-5'>
+            <img src={obj5.img} alt="" className='content-center rounded-lg h-60 w-full' />
+            <h1>{obj5.text}</h1>
+            <h4>{obj5.desc}</h4>
+          </div>
+          <div className='text-center overflow-hidden rounded-lg p-5'>
+            <img src={obj6.img} alt="" className='content-center rounded-lg h-60 w-full' />
+            <h1>{obj6.text}</h1>
+            <h4>{obj6.desc}</h4>
+          </div>
+        </div>
+
+        <div className='bg-blue-600 text-white content-center h-fit py-20 text-xl font-semibold space-y-3 px-24'>
+          {brandname} <br />
+          <br />
+          
+          Response time: we response with in 24 hours <br /> <br />
+          Phone number: {tel} <br />
+          Emergency call on: {emer_call} <br />
+          Email: {email} <br /><br />
+
+          Address: {address} <br />
+          Location: {location}, {state}, {pincode} <br />
+        </div>
+
 
       </section>
 

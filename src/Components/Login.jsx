@@ -5,8 +5,8 @@ import logo from '../assets/hospital.avif'
 import logo2 from '../assets/png/signup_logo.png'
 import { Link } from 'react-router-dom'
 
-function Login() {
-  let brand = "Sarthi";
+function Login(props) {
+  let brandname = props.info.brand;
   return (
     <>
       <Nav />
@@ -18,7 +18,7 @@ function Login() {
             <div className='inline-flex px-20'>
               <img src={logo} alt="hello" className='h-10 self-center' />
               <div className='w-fit px-2 content-center'>
-                <h2 className='text-sky-500 font-bold'>{brand}</h2>
+                <h2 className='text-sky-500 font-bold'>{brandname}</h2>
                 <h3 className='text-gray-700 italic'>A Hospital that lives in your pocket</h3>
               </div>
             </div>

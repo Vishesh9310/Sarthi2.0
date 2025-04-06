@@ -70,10 +70,10 @@ function Consultant() {
         <article className='h-fit bg-cover mb-30' style={{backgroundImage: `url(${blue})`}}>
           <div className='py-10 text-center'>
             <h1 className='text-9xl text-purple-100 font-semibold font-sans my-10 leading-snug'>Consult with Leading Healthcare <span className='bg-blue-500'>Professionals</span></h1>
-            <p className='flex justify-center pb-10 gap-5'>
+            {/* <p className='flex justify-center pb-10 gap-5'>
               <Link to='/signup' className='py-2 font-bold hover:text-blue-500 hover:border-blue-500 hover:bg-blue-200 text-white px-10 bg-none border-2 border-white rounded-4xl w-50 content-center'>Registration</Link>
               <Link to='/login' className='py-2 font-bold text-none px-10 hover:text-blue-500 hover:border-blue-500 hover:bg-blue-200 bg-white border-2 border-white rounded-4xl w-50 content-center'>Login</Link>
-            </p>
+            </p> */}
           </div>
 
           <div className='inline-flex gap-5 px-24 mb-5 mt-20'>
@@ -176,11 +176,72 @@ function Consultant() {
           {/* Medical Reacords & History */}
           {/* Payment Gateway Integration */}
 
-          {/* Health Monitoring */}
-          <ConsultantHealthMonitoring/>
+          {/* Health Monitoring
+          <ConsultantHealthMonitoring/> */}
           {/* Emergency Consultation */}
           {/* Reminders & Notifications */}
           {/* Review & Ratings */}
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 px-6 sm:px-12 md:px-24 py-10">
+
+          <div className="bg-sky-500 pb-10 text-white">
+            <h1 className="px-5 text-2xl bg-white p-3 text-black">Doctors' Timetable</h1>
+            <div className="inline-flex flex-col sm:flex-row w-full p-5 ml-5">
+              <div className="sm:w-1/2 p-5">
+                <h2 className="py-10">View a timetable showing when our doctors are usually available.</h2>
+                <Link
+                  to="/login"
+                  className="w-fit bg-sky-400 text-white hover:bg-sky-300 px-5 py-1 mt-5 mr-5"
+                >
+                  MAKE AN APPOINTMENT
+                </Link>
+              </div>
+              <div className="sm:w-1/2 p-5">
+                <p className="flex w-full justify-between border-b-2 border-white py-3">
+                  <h3>Weekdays</h3> <span>8.00-20.00</span>
+                </p>
+                <p className="flex w-full justify-between border-b-2 border-white py-3">
+                  <h3>Saturday</h3> <span>9.30-17.30</span>
+                </p>
+                <p className="flex w-full justify-between py-3">
+                  <h3>Sunday</h3> <span>9.30-15.00</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Make an Appointment Section */}
+          <div className="bg-sky-500">
+            <h1 className="px-5 text-2xl bg-white p-3">Make an Appointment</h1>
+            <div className="inline-flex w-full px-5 pb-5 pt-5">
+              <form action="" className="flex flex-col sm:flex-row w-full">
+                <div className="p-5 sm:w-1/2">
+                  <input
+                    type="text"
+                    placeholder="Enter Name"
+                    className="outline-none w-full bg-white hover:bg-sky-100 px-5 py-1 mt-5"
+                  />
+                  <input
+                    type="tel"
+                    placeholder="Phone"
+                    className="w-full outline-none bg-white hover:bg-sky-100 px-5 py-1 mt-5"
+                  />
+                </div>
+                <div className="p-5 sm:w-1/2">
+                  <input
+                    type="email"
+                    placeholder="E-mail"
+                    className="w-full outline-none bg-white hover:bg-sky-100 px-5 py-1 mt-5"
+                  />
+                  <input
+                    type="submit"
+                    className="w-full bg-sky-400 text-white hover:bg-sky-300 px-5 py-1 mt-5 mr-5"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+          </div>
 
         <Label />
         

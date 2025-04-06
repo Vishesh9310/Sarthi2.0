@@ -7,8 +7,8 @@ import dir from '../assets/svg/direction_icon.svg'
 import face1 from '../assets/jpg/face_doctor.jpg'
 import hospital from '../assets/jpg/hospital3.jpg'
 
-function Gallery() {
-  const brandname = "Sarthi";
+function Gallery(props) {
+  const brandname = props.info.brand;
 
   return (
     <>

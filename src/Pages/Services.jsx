@@ -15,16 +15,15 @@ import logo8 from '../assets/jpg/logo8.jpg'
 import logo9 from '../assets/jpg/logo9.jpg'
 import logo10 from '../assets/png/logo10.png'
 
-function Services() {
-  const brandname = "Sarthi";
-
-  const location = "Noida";
-  const address = "E2, Block e, sector-26";
-  const state = "Uttar-Pradesh";
-  const pincode = 201301;
-  const tel = 543245;
-  const email = "sarthi@gmail.com";
-  const emer_call = 654322234;
+function Services(props) {
+  const brandname = props.info.brand;
+  const location = props.info.location;
+  const address = props.info.address;
+  const state = props.info.state;
+  const pincode = props.info.pincode;
+  const tel = props.info.tel;
+  const email = props.info.email;
+  const emer_call = props.info.emer_call;
 
   const data1 = { img: logo1, h: 'M/F Nurse', p: 'Services can include wound care, administering medications, monitoring vital signs, providing therapies, and educating patients and families about health management.' };
   const data2 = { img: logo2, h: 'M/F Attendant', p: 'It involve trained professionals providing assistance and support to individuals, especially the elderly, with their daily activities and health needs.' };
@@ -42,11 +41,17 @@ function Services() {
     <>
       <Nav />
 
-      <section className='bg-gradient-to-tl from-white to-green-300 text-black h-fit pb-40 px-24'>
+      <section className='bg-gradient-to-b from-blue-400 to-sky-200 text-black h-fit pb-40 px-24'>
         <div className='py-10'>
-          <h1 className='font-bold text-2xl'>OUR SERVICES</h1>
-          <em>Our Medical Service & Specialties</em>
-          <div className=' grid md:grid-cols-4 w-full '>
+          <h1 className='font-bolder text-4xl text-white'>OUR SERVICES</h1>
+          <em className='text-amber-50 border-b-2 border-white'>Our Medical Service & Specialties</em>
+
+          {/* <div className=' grid md:grid-cols-4 w-full '>
+            <Card data={data1} />
+            <Card data={data2} />
+          </div> */}
+
+          <div className='w-full mt-10'>
             <Card data={data1} />
             <Card data={data2} />
             <Card data={data3} />
@@ -62,14 +67,14 @@ function Services() {
         </div>
 
         <div className='pb-10'>
-          <h1 className='font-bold text-2xl pt-5 text-green-700'>24/7</h1>
+          <h1 className='font-bold text-2xl pt-5 text-blue-700'>24/7</h1>
           <p>We provide total<br />HealthCare Solutions</p>
         </div>
 
         <div className='bg-sky-300 px-8 py-10 rounded-2xl text-green-900'>
           <h1 className='text-lg font-bolder'>Could not find the what you are looking for?</h1>
           <h2 className='text-xl font-bold mb-6 mt-2'>Request a Callback</h2>
-          
+
           <form action="">
             <div className='inline-flex gap-3 w-full'>
               <input type="text" className='outline-none border-1 border-gray-700 rounded-md px-3' placeholder='Enter Name' />
@@ -79,7 +84,7 @@ function Services() {
               </div>
               <input type="number" className='outline-none border-1 border-gray-700 rounded-md px-3' placeholder='Enter OTP' />
             </div>
-            
+
             <input type="submit" className='px-7 py-2 bg-sky-400 rounded mt-8' />
           </form>
         </div>

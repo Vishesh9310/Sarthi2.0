@@ -6,6 +6,7 @@ function buy() {
     return (
         <>
             <Nav />
+            
             <div className="bg-gray-100 min-h-screen p-6">
                 <div className="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
                     <div className="flex justify-between items-center border-b pb-4">

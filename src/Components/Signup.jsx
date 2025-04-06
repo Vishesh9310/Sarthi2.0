@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Nav from '../Components/navbar'
 import Footer from '../Components/footer'
 import logo from '../assets/hospital.avif'
 import logo2 from '../assets/png/signup_logo.png'
+import Home from '../Pages/Home'
 import { Link } from 'react-router-dom'
 
-function Signup() {
-  let brand = "Sarthi";
+function Signup(props) {
+  const brandname = props.info.brand;
+  const [isSignup, setIsSignup] = useState(true);
   return (
     <>
       <Nav />
@@ -18,14 +20,14 @@ function Signup() {
             <div className='inline-flex px-20'>
               <img src={logo} alt="hello" className='h-10 self-center' />
               <div className='w-fit px-2 content-center'>
-                <h2 className='text-sky-500 font-bold'>{brand}</h2>
+                <h2 className='text-sky-500 font-bold'>{brandname}</h2>
                 <h3 className='text-gray-700 italic'>A Hospital that lives in your pocket</h3>
               </div>
             </div>
 
             <form action="" className='py-2 h-fit p-20'>
               <h3 className='font-bold text-4xl mt-10 mb-1'>Let's create your account</h3>
-              <h2 className='font-bolder mb-10'>Signing up for {brand} is fast and free.</h2>
+              <h2 className='font-bolder mb-10'>Signing up for {brandname} is fast and free.</h2>
               <label htmlFor="#name" className='text-gray-500'>Name</label>
               <input type="text" id='name' className='bg-gray-100 border-1 px-3 outline-none border-gray-200 rounded-md w-full h-10 mb-6' />
               
@@ -35,8 +37,8 @@ function Signup() {
               <label htmlFor="#password" className='text-gray-500'>Password</label>
               <input type="password" id='password' className='bg-gray-100 border-1 px-3 outline-none border-gray-200 rounded-md w-full h-10' />
               <input type="checkbox" className='mb-6' id='t&c'/>
-              <label htmlFor="#t&c" className='content-center px-3'>I agree to {brand} Terms, Privacy Policy</label>
-              <button className='bg-blue-600 text-white content-center px-20 rounded-md h-10 w-full'>Sign Up</button>
+              <label htmlFor="#t&c" className='content-center px-3'>I agree to {brandname} Terms, Privacy Policy</label>
+              <button className='bg-blue-600 text-white content-center px-20 rounded-md h-10 w-full' onClick={()=>{isSignup ? <Home/> : null} }>Sign Up</button>
               
               <div className='flex justify-center gap-2 py-2'>
                 <p>have an Account?</p>

@@ -11,14 +11,15 @@ function navbar() {
         setIsMenuOpen(!isMenuOpen);
     };
 
-    const brand = "Sarthi";
+    const brandname = "Sarthi";
+
     return (
         <nav className="inline-flex justify-between w-full px-4 sm:px-24 h-fit bg-blue-100 text-sky-600 sticky top-0">
             {/* Logo Section */}
             <div className="inline-flex w-1/3 p-1 h-20">
                 <img src={logo} alt="logo" className="h-14 self-center" />
                 <div className="w-fit px-2 content-center">
-                    <h2 className="text-sky-500 font-bold">{brand}</h2>
+                    <h2 className="text-sky-500 font-bold">{brandname}</h2>
                     <h3 className="text-gray-700 italic">A Hospital that lives in your pocket</h3>
                 </div>
             </div>
@@ -42,14 +43,15 @@ function navbar() {
                         <Link to="/news" className="hover:text-green-600">News</Link>
                     </li>
                     <li>
+                        <Link to="/contactus" className="hover:text-green-600">Contact Us</Link> 
+                    </li>
+                    <li className="w-fit">
                         {isloggedin
-                            ? <Link to="/contactus" className="nav-item bg-sky-400 hover:bg-sky-300 px-4 py-1 rounded text-white animate-pulse">Contact Us</Link>
-                            : <div className="inline-flex gap-2">
+                            && <div className="inline-flex gap-2">
                                 <Link to="/signup" className="nav-item bg-sky-400 hover:bg-sky-300 px-4 py-1 rounded text-white animate-pulse">SignUp</Link>
                                 <Link to="/login" className="nav-item bg-sky-400 hover:bg-sky-300 px-4 py-1 rounded text-white animate-pulse">Login</Link>
-                            </div>
+                              </div>
                         }
-
                     </li>
                 </ul>
             </div>

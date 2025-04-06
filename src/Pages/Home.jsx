@@ -9,8 +9,8 @@ import nurshing_care from '../assets/png/nurse.png'
 import Label from '../Components/label'
 import {Link} from 'react-router-dom'
 
-function Home() {
-    const brandname = "Sarthi";
+function Home(props) {
+    const brandname = props.info.brand;
     const h1head ="Your health our priority";
     const teampic = team_pic;
     
