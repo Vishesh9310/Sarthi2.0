@@ -23,14 +23,18 @@ function footer() {
                     <h3 className='font-bold text-lg pt-5 pb-1'>Our Doctors</h3>
                     <div className=' w-fit'>
                         <p>Dr.Neha: <em>Cardiologist</em></p>
-                        <p>Dr.Pallavi: <em>Orthopedic doctor</em></p>
+                        <p>Dr.Pallavi: <em>Cardiologist</em></p>
                         <p>Dr.Muskan: <em>Physiologist</em></p>
                     </div>
                 </div>
                 <div className='bg-none h-full w-1/3 px-20'>
                     <h3 className='font-bold text-lg  pb-2'>Address</h3>
-                    <address>21 Av. <br /> de l'Hermitage, <br />98000, Monaco</address>
+                    <address className='mb-10'>21 Av. <br /> de l'Hermitage, <br />98000, Monaco</address>
+                    
+                    <Link to='/about' className='font-bold text-lg'>About Us</Link>
+                
                 </div>
+                
                 <div className='bg-none h-full w-1/3 px-12'>
                     <div className='pb-6'>
                         <h3 className='font-bold pb-2'>Social media</h3>

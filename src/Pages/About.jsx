@@ -25,7 +25,7 @@ function About(props) {
             <Nav />
 
             <section className='bg-sky-200 text-white h-fit pb-40'>
-                <div className='px-24 pb-26 bg-cover' style={{backgroundImage:`url(${doctorface})`}}>
+                <div className='px-24 pb-26 bg-cover' style={{ backgroundImage: `url(${doctorface})` }}>
                     <div className='w-1/2 h-fit py-20 pl-40 '>
                         <p className='font-bold text-6xl pt-2'>We Provide High Solutions for Your Health</p>
                         <p className='leading-snug pt-3 italic mb-3'>your problems our problems</p>
@@ -100,6 +100,22 @@ function About(props) {
                         </div>
                     </div>
                 </section>
+
+                <div className='bg-sky-300 px-8 py-10 rounded-2xl text-green-900 mt-20 mx-20 shadow-2xl shadow-gray-400'>
+                    <h1 className='text-lg font-bolder'>Could not find the what you are looking for?</h1>
+                    <h2 className='text-xl font-bold mb-6 mt-2'>Request a Callback</h2>
+
+                    <form action="">
+                        <div className='inline-flex gap-3 w-full'>
+                            <input type="text" className='outline-none border-1 border-gray-700 rounded-md px-3 py-1' placeholder='Enter Name' />
+                            <input type="tel" className='outline-none border-1 border-gray-700 rounded-md px-3 py-1' placeholder='Mobile Number' />
+                            <input type="email" className='outline-none border-1 border-gray-700 rounded-md px-3 py-1' placeholder='Email' />
+                        </div>
+                        <input type="submit" className='px-7 py-1 bg-sky-400 rounded mt-8' />
+                    </form>
+                </div>
+
+
 
                 <div className='bg-none mx-20 text-green-700 mt-40'>
                     <h3 className='text-xl text-blue-600 pt-8 pb-5 mb-5 border-b border-blue-600'>{brandname} {location}</h3>

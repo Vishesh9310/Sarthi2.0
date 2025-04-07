@@ -71,25 +71,8 @@ function Services(props) {
           <p>We provide total<br />HealthCare Solutions</p>
         </div>
 
-        <div className='bg-sky-300 px-8 py-10 rounded-2xl text-green-900'>
-          <h1 className='text-lg font-bolder'>Could not find the what you are looking for?</h1>
-          <h2 className='text-xl font-bold mb-6 mt-2'>Request a Callback</h2>
 
-          <form action="">
-            <div className='inline-flex gap-3 w-full'>
-              <input type="text" className='outline-none border-1 border-gray-700 rounded-md px-3' placeholder='Enter Name' />
-              <div className=' border-1 border-gray-700 rounded-md'>
-                <input type="tel" className='outline-none px-3' placeholder='Mobile Number' />
-                <button className='bg-sky-400 px-2'>Send OTP</button>
-              </div>
-              <input type="number" className='outline-none border-1 border-gray-700 rounded-md px-3' placeholder='Enter OTP' />
-            </div>
-
-            <input type="submit" className='px-7 py-2 bg-sky-400 rounded mt-8' />
-          </form>
-        </div>
-
-        <div className='bg-none mx-20'>
+        <div className='bg-none'>
           <h3 className='text-xl text-blue-600 pt-8 pb-5 mb-5 border-b border-blue-600'>{brandname} {location}</h3>
           <p>
             {address} {location} {state} {pincode} <br />

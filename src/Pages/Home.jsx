@@ -8,7 +8,6 @@ import shopping from '../assets/png/cart.png'
 import nurshing_care from '../assets/png/nurse.png'
 import Label from '../Components/label'
 import {Link} from 'react-router-dom'
-import Buy from '../Components/Ecom/buy'
 
 function Home(props) {
     const brandname = props.info.brand;
@@ -17,7 +16,6 @@ function Home(props) {
     
     return (
         <>
-        <Buy/>
             <Nav/>
             <section className='bg-sky-200 h-fit pb-40'>
                 <div className='px-24 pb-26'>

@@ -5,7 +5,7 @@ import PrescriptionCard from "../Components/DoctorConsultant/PrescriptionCard";
 
 import ConsultantHealthMonitoring from "../Components/DoctorConsultant/ConsultantHealthMonitoring";
 
-import Nav from '../Components/DoctorConsultant/navbarConsultation'
+import Nav from '../Components/navbar'
 import Label from '../Components/label'
 import { Link } from 'react-router-dom'
 import Footer from '../Components/footer'
