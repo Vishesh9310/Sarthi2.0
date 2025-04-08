@@ -41,7 +41,7 @@ function Services(props) {
     <>
       <Nav />
 
-      <section className='bg-gradient-to-b from-blue-400 to-sky-200 text-black h-fit pb-40 px-24'>
+      <section className=' h-fit pb-40 px-24'>
         <div className='py-10'>
           <h1 className='font-bolder text-4xl text-white'>OUR SERVICES</h1>
           <em className='text-amber-50 border-b-2 border-white'>Our Medical Service & Specialties</em>
@@ -67,18 +67,18 @@ function Services(props) {
         </div>
 
         <div className='pb-10'>
-          <h1 className='font-bold text-2xl pt-5 text-blue-700'>24/7</h1>
+          <h1 className='font-bold text-2xl pt-5 divheadingblack'>24/7</h1>
           <p>We provide total<br />HealthCare Solutions</p>
         </div>
 
 
         <div className='bg-none'>
-          <h3 className='text-xl text-blue-600 pt-8 pb-5 mb-5 border-b border-blue-600'>{brandname} {location}</h3>
+          <h3 className='text-xl divheadingblack pt-8 pb-5 mb-5 border-b border-black'>{brandname} {location}</h3>
           <p>
             {address} {location} {state} {pincode} <br />
-            Email: <Link to="https://accounts.google.com" className='text-blue-600' href="#email">{email}</Link> <br />
-            Phone No: <Link to="/zfun" className='text-blue-600' href="#tel">{tel} </Link><br />
-            Emergency Contact No: <Link to="/zfun" className='text-blue-600' href="#emer_call">{emer_call}</Link>
+            Email: <Link to="https://accounts.google.com" className='' href="#email">{email}</Link> <br />
+            Phone No: <Link to="/zfun" className='' href="#tel">{tel} </Link><br />
+            Emergency Contact No: <Link to="/zfun" className='' href="#emer_call">{emer_call}</Link>
           </p>
         </div>
       </section>

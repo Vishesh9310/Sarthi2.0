@@ -14,12 +14,12 @@ function navbar() {
     const brandname = "Sarthi";
 
     return (
-        <nav className="inline-flex justify-between w-full px-4 sm:px-24 h-fit bg-blue-100 text-sky-600 sticky top-0">
+        <nav className="inline-flex justify-between w-full px-4 sm:px-24 h-fit bg-white text-teal-500 sticky top-0">
             {/* Logo Section */}
             <div className="inline-flex w-1/3 p-1 h-20">
                 <img src={logo} alt="logo" className="h-14 self-center" />
                 <div className="w-fit px-2 content-center">
-                    <h2 className="text-sky-500 font-bold">{brandname}</h2>
+                    <h2 className=" font-bold">{brandname}</h2>
                     <h3 className="text-gray-700 italic">A Hospital that lives in your pocket</h3>
                 </div>
             </div>
@@ -48,8 +48,8 @@ function navbar() {
                     <li className="w-fit">
                         {isloggedin
                             && <div className="inline-flex gap-2">
-                                <Link to="/signup" className="nav-item bg-sky-400 hover:bg-sky-300 px-4 py-1 rounded text-white animate-pulse">SignUp</Link>
-                                <Link to="/login" className="nav-item bg-sky-400 hover:bg-sky-300 px-4 py-1 rounded text-white animate-pulse">Login</Link>
+                                <Link to="/signup" className="nav-item bg-teal-500 hover:bg-sky-300 px-4 py-1 rounded text-white ">SignUp</Link>
+                                <Link to="/login" className="nav-item bg-teal-500 hover:bg-sky-300 px-4 py-1 rounded text-white ">Login</Link>
                               </div>
                         }
                     </li>
@@ -59,32 +59,32 @@ function navbar() {
             <div className="w-fit">
                 {/* Mobile Menu Button (Hamburger) */}
                 <div className="sm:hidden float-right items-center bg-none">
-                    <button onClick={toggleMenu} className="text-sky-600">
+                    <button onClick={toggleMenu} className="">
                         <img src={barlogo} alt="" className="block h-6 w-6" fill="none" />
                     </button>
                 </div>
 
                 {/* Mobile Menu */}
                 {isMenuOpen && (
-                    <div className="sm:hidden w-fit bg-blue-100 p-4">
+                    <div className="sm:hidden w-fit bg-none p-4">
                         <ul className="flex flex-col items-center space-y-4 font-bold w-fit">
                             <li>
-                                <Link to="/" className="text-sky-600 hover:text-green-600">Home</Link>
+                                <Link to="/" className=" hover:text-green-600">Home</Link>
                             </li>
                             <li>
-                                <Link to="/about" className="text-sky-600 hover:text-green-600">About Us</Link>
+                                <Link to="/about" className="hover:text-green-600">About Us</Link>
                             </li>
                             <li>
-                                <Link to="/service" className="text-sky-600 hover:text-green-600">Services</Link>
+                                <Link to="/service" className=" hover:text-green-600">Services</Link>
                             </li>
                             <li>
-                                <Link to="/gallery" className="text-sky-600 hover:text-green-600">Gallery</Link>
+                                <Link to="/gallery" className=" hover:text-green-600">Gallery</Link>
                             </li>
                             <li>
-                                <Link to="/news" className="text-sky-600 hover:text-green-600">News</Link>
+                                <Link to="/news" className=" hover:text-green-600">News</Link>
                             </li>
                             <li>
-                                <Link to="/contactus" className="text-sky-600 hover:text-green-600">Contact Us</Link>
+                                <Link to="/contactus" className=" hover:text-green-600">Contact Us</Link>
                             </li>
                         </ul>
                     </div>

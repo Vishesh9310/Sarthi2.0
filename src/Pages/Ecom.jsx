@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Nav from '../Components/Ecom/navbarEcom'
+import Nav from '../Components/navbar'
 import Lable from '../Components/label'
 import Footer from '../Components/footer'
 import { Link } from 'react-router-dom'
@@ -62,7 +62,7 @@ function Ecom() {
             </div>
           </div>
 
-          <div className='bg-white rounded-t-4xl h-fit'>
+          <div className='backg_teal rounded-t-4xl h-fit'>
             <div className='bg-none grid grid-cols-6 p-14'>
               <Firstdiv name="Bone & Joint Care" img={cart} />
               <Firstdiv name="Diabetes Care" img={cart} />
@@ -74,8 +74,8 @@ function Ecom() {
 
             <div className='px-24 py-10'>
               <div className='flex justify-between'>
-                <h1 className='text-4xl font-bold w-1/4'>Todays best deals for you!</h1>
-                <Link to='/showmore' className='font-bold'>SEE ALL PRODUCTS &rarr;</Link>
+                <h1 className='divheadingblack text-4xl font-bold w-1/4'>Todays best deals for you!</h1>
+                <Link to='/showmore' className='divheadingblack font-bold'>SEE ALL PRODUCTS &rarr;</Link>
               </div>
 
               <div className='grid grid-cols-4 mt-5'>
@@ -106,7 +106,7 @@ function Ecom() {
                 </div>
               </div>
 
-              <h1 className='text-4xl font-bold w-1/4 text-sky-600'>Featured Brands</h1>
+              <h1 className='text-4xl font-bold w-1/4 divheadingblack'>Featured Brands</h1>
               
               <div className='grid grid-cols-7'>
                 <Featuredbrand img={pharma1} brand="Cipla" />
@@ -119,8 +119,8 @@ function Ecom() {
               </div>
 
               <div className='flex justify-between'>
-                <h1 className='text-4xl font-bold w-1/4 text-sky-600'>Trending Products for You!</h1>
-                <Link to='/showmore' className='font-bold'>SEE ALL PRODUCTS &rarr;</Link>
+                <h1 className='text-4xl font-bold w-1/4 divheadingblack'>Trending Products for You!</h1>
+                <Link to='/showmore' className='divheadingblack font-bold'>SEE ALL PRODUCTS &rarr;</Link>
               </div>
 
               <div className='grid grid-cols-4 mt-5'>
@@ -154,7 +154,7 @@ function Ecom() {
                 </div>
               </div>
 
-              <div className='flex justify-between pt-10 text-sky-600'>
+              <div className='flex justify-between pt-10 divheadingblack'>
                 <h1 className='text-4xl font-bold w-1/4'>Baby Food Collecton</h1>
                 <Link to='/showmore' className='font-bold'>SEE ALL PRODUCTS &rarr;</Link>
               </div>
@@ -219,7 +219,7 @@ function Ecom() {
           </div>
         </div>
 
-        <div className='px-50 py-6 bg-white'>
+        <div className='form px-50 py-6'>
           <h3 className='text-center text-4xl font-bold'>Got Questions?</h3>
           <div className='bg-gray-200 p-6 my-3 rounded-2xl flex justify-between' onClick={() => { showmore() }}>
             <h3 className='text-lg font-semibold'>How do I start online consulation with doctors on Medicare?</h3>
@@ -265,7 +265,7 @@ function Ecom() {
       </section>
 
       <section>
-        <div className='px-24 py-10 font-semibold bg-sky-200'>
+        <div className='px-24 py-10 font-semibold form'>
           <table className='w-full'>
             <caption class="caption-bottom">
               Table 3.1: chart for each items.

@@ -27,16 +27,16 @@ function AppointmentForm({ onAddAppointment }) {
 
   return (
     <div>
-      <div className="h-fit bg-sky-500">
+      <div className="h-fit backg_teal">
         <h2 className="text-xl font-semibold text-black py-4 text-center bg-white">Make An Appointment</h2>
         <form onSubmit={handleSubmit} className="mt-3 p-5 space-y-5">
-          <input name="name" type="text" placeholder="Enter Your Name" value={name} onChange={(e) => setName(e.target.value)} required className="p-2 outline-none bg-white w-full" />
-          <input name="email" type="email" placeholder="Enter Your Email" value={email} onChange={(e) => setEmail(e.target.value)} required className="p-2 outline-none bg-white w-full" />
-          <input name="phoneNo" type="tel" placeholder="Enter Mobile Number" value={tel} onChange={(e) => setTel(e.target.value)} required className="p-2 outline-none bg-white w-full" />
-          <input name="date" type="date" id="date" value={date} onChange={(e) => setDate(e.target.value)} required className="p-2 outline-none bg-white w-full" />
-          <input name="time" type="time" id="time" value={time} onChange={(e) => setTime(e.target.value)} required className="p-2 outline-none bg-white w-full" />
-          <textarea name="symptoms" id="textarea" value={textarea} onChange={(e) => setArea(e.target.value)} required className="p-2 outline-none bg-white w-full"></textarea>
-          <select name="disease" id="disease" onChange={(e) => setDisease(e.target.value)} className="p-2 outline-none bg-white w-full">
+          <input name="name" type="text" placeholder="Enter Your Name" value={name} onChange={(e) => setName(e.target.value)} required className="p-2 outline-none div divheadingblack w-full" />
+          <input name="email" type="email" placeholder="Enter Your Email" value={email} onChange={(e) => setEmail(e.target.value)} required className="p-2 outline-none div divheadingblack w-full" />
+          <input name="phoneNo" type="tel" placeholder="Enter Mobile Number" value={tel} onChange={(e) => setTel(e.target.value)} required className="p-2 outline-none div divheadingblack w-full" />
+          <input name="date" type="date" id="date" value={date} onChange={(e) => setDate(e.target.value)} required className="p-2 outline-none div divheadingblack w-full" />
+          <input name="time" type="time" id="time" value={time} onChange={(e) => setTime(e.target.value)} required className="p-2 outline-none div divheadingblack w-full" />
+          <textarea name="symptoms" id="textarea" value={textarea} onChange={(e) => setArea(e.target.value)} required className="p-2 outline-none div divheadingblack w-full"></textarea>
+          <select name="disease" id="disease" onChange={(e) => setDisease(e.target.value)} className="p-2 outline-none div divheadingblack w-full">
             <option value="notsure">Not Sure</option>
             <optgroup label="Viral Fever">
               <option value="covid19">COVID-19</option>
@@ -81,7 +81,7 @@ function AppointmentForm({ onAddAppointment }) {
           </select>
           <button type="submit" className="w-full bg-blue-500 text-white p-2">Book Appointment</button>
         </form>
-        <button name="disease" id="disease" onClick={()=>setDisease("Not Sure")} className="p-2 outline-none bg-white w-full">press here for not sure about your diesease</button>
+        <button name="disease" id="disease" onClick={()=>setDisease("Not Sure")} className="p-2 outline-none div divheadingblack w-full">press here for not sure about your diesease</button>
           
       </div>
     </div>

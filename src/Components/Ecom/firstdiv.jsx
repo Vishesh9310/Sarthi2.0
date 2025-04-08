@@ -7,7 +7,7 @@ function firstdiv(props) {
   return (
     <Link to="/payment" className='text-center p-3'>
       <img className='rounded-3xl' src={img} alt="" />
-      <h5>{name}</h5>
+      <h5 className='divheadingblack'>{name}</h5>
     </Link>
   )
 }

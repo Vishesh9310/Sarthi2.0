@@ -1,5 +1,55 @@
 #root {
   margin: 0px;
   padding: 0px;
+  color: white;
+  background-color: #009688;
 }
 
+.bg{
+  background-color: white;
+}
+
+.backg_teal{
+  background-color: #009688;
+  color: white;
+}
+
+.form{
+  background-color: white;
+  color: #009688;
+}
+
+.div{
+  background-color: white;
+  color: #009688;
+  border: 3px solid black;
+}
+
+:hover.ele{
+  background-color: #009688;
+  color: white;
+}
+
+.divheadingblack{
+  color: black;
+  font-weight: bold;
+}
+
+.button{
+  background-color: #312e81;
+}
+
+.button_border{
+  background-color: none;
+  border: 2px solid black;
+}
+
+.label{
+  background-color: white;
+  color: #009688;
+}
+
+.footer{
+  background-color: #009688;
+  color: white;
+}

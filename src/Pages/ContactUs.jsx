@@ -41,26 +41,26 @@ function ContactUs(props) {
     <>
       <Nav />
 
-      <section className="bg-sky-200">
+      <section className="">
         <div className="px-6 sm:px-12 md:px-24 pb-26 bg-cover bg-center" style={{ backgroundImage: `url(${doctorface})` }}>
           <div className="w-full md:w-1/2 h-fit py-20 pl-6 md:pl-40 text-white space-y-3">
             <p className="leading-loose">Individual approach to each patient</p>
             <p className="font-bold text-3xl sm:text-4xl md:text-6xl pb-5">Medical Service</p>
-            <Link to="/consultant" className='bg-blue-500 p-2'>Book An Appointment</Link>
+            <Link to="/consultant" className=' button p-2'>Book An Appointment</Link>
           </div>
         </div>
 
-        <div className='grid grid-cols-2 px-24 bg-gradient-to-l from-blue-200 to-sky-100'>
+        <div className='grid grid-cols-2 px-24 my-20'>
           <img src={doctor} alt="" className='' />
           <div className='py-10 px-5 space-y-5'>
-            <h1 className="text-3xl font-bold">What Makes Us Different</h1>
+            <h1 className="divheadingblack text-3xl font-bold">What Makes Us Different</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum pariatur, doloribus beatae vitae officia sed quisquam voluptate, perspiciatis qui dolor laboriosam eos perferendis ratione ullam sequi deleniti ea nobis quidem.</p>
             {isvisible && <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta laboriosam officiis nobis blanditiis fuga expedita voluptatem tenetur qui dolor sequi eum eius rerum repellendus praesentium cumque, pariatur quidem. Tempora, veritatis.</p>}
-            <button onClick={showmore} className='text-blue-600'>{isvisible ? "Show less" : "Show more"}</button>
+            <button onClick={showmore} className='text-indigo-800'>{isvisible ? "Show less" : "Show more"}</button>
           </div>
         </div>
 
-        <div className='grid grid-cols-3 px-24 py-10'>
+        <div className='div grid grid-cols-3 px-24 py-10'>
           <div className='text-center overflow-hidden rounded-lg p-5'>
             <img src={obj1.img} alt="" className='content-center rounded-lg h-60 w-full' />
             <h1>{obj1.text}</h1>
@@ -93,7 +93,7 @@ function ContactUs(props) {
           </div>
         </div>
 
-        <div className='bg-blue-600 text-white content-center h-fit py-20 text-xl font-semibold space-y-3 px-24'>
+        <div className=' content-center h-fit py-20 text-xl font-semibold space-y-3 px-24'>
           {brandname} <br />
           <br />
           

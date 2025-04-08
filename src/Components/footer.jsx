@@ -9,7 +9,7 @@ function footer() {
     const contactno = 1234565432;
     const email = "sarthi@gmail.com";
     return (
-        <footer className='h-fit content-center w-full text-white bg-sky-600'>
+        <footer className='h-fit content-center w-full footer'>
             <div className='h-fit px-60 pt-10 pb-6 gap-10 inline-flex content-center w-full text-white'>
                 <div className='bg-none h-full w-1/3 px-10'>
                     <h3 className='font-bold text-lg pb-2'>CEO's</h3>

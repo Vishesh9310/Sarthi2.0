@@ -10,7 +10,7 @@ function AppointmentList({ appointments, onCancelAppointment }) {
       <h2 className="text-xl font-semibold">Your Appointments:</h2>
       <ul className="space-y-4 mt-4">
         {appointments.map((appointment) => (
-          <li key={appointment.id} className="flex justify-between items-center p-4 bg-gray-50 rounded-lg shadow">
+          <li key={appointment.id} className="flex justify-between items-center p-4 form rounded-lg shadow">
             <div>
               <p className="text-lg font-semibold">Name: {appointment.name}</p>
               <p className="text-lg font-semibold">Email: {appointment.email}</p>

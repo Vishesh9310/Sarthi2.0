@@ -24,7 +24,7 @@ function About(props) {
         <>
             <Nav />
 
-            <section className='bg-sky-200 text-white h-fit pb-40'>
+            <section className=' h-fit pb-40'>
                 <div className='px-24 pb-26 bg-cover' style={{ backgroundImage: `url(${doctorface})` }}>
                     <div className='w-1/2 h-fit py-20 pl-40 '>
                         <p className='font-bold text-6xl pt-2'>We Provide High Solutions for Your Health</p>
@@ -35,7 +35,7 @@ function About(props) {
 
                 <Aboutdiv1 />
 
-                <section className='shadow-2xl bg-blue-200 rounded-4xl mx-20'>
+                <section className='shadow-2xl div rounded-4xl mx-20'>
 
                     <div className='w-full px-24 justify-center flex py-5'>
                         <div className='text-center inline-flex items-center w-fit text-3xl'>
@@ -43,8 +43,8 @@ function About(props) {
                         </div>
                     </div>
 
-                    <div className='px-5 py-10 text-black bg-blue-200 mx-20 my-10 rounded-2xl'>
-                        <h1 className='font-bold text-3xl'>About Us:</h1>
+                    <div className='px-5 py-10 mx-20 my-10 rounded-2xl'>
+                        <h1 className='divheadingblack font-bold text-3xl'>About Us:</h1>
                         <p className='py-4 text-lg'>
                             IBP Healthcare Solutions Private Limited was established in 2023. IBP Healthcare Solutions
                             Private Limited is located in Rampuri Surya Nagar Ghaziabad. We are known for providing
@@ -68,7 +68,7 @@ function About(props) {
                             as per the requirements.
                         </p>
 
-                        <div className='text-green-600 grid grid-cols-2'>
+                        <div className='grid grid-cols-2'>
                             <div className='inline-flex py-10 gap-5 content-center'>
                                 <img src={logo} alt="hello" className='h-15 w-15 rounded-[100%]' />
                                 <div>
@@ -101,7 +101,7 @@ function About(props) {
                     </div>
                 </section>
 
-                <div className='bg-sky-300 px-8 py-10 rounded-2xl text-green-900 mt-20 mx-20 shadow-2xl shadow-gray-400'>
+                <div className='form px-8 py-10 rounded-2xl mt-20 mx-20 shadow-2xl shadow-gray-400'>
                     <h1 className='text-lg font-bolder'>Could not find the what you are looking for?</h1>
                     <h2 className='text-xl font-bold mb-6 mt-2'>Request a Callback</h2>
 
@@ -111,14 +111,14 @@ function About(props) {
                             <input type="tel" className='outline-none border-1 border-gray-700 rounded-md px-3 py-1' placeholder='Mobile Number' />
                             <input type="email" className='outline-none border-1 border-gray-700 rounded-md px-3 py-1' placeholder='Email' />
                         </div>
-                        <input type="submit" className='px-7 py-1 bg-sky-400 rounded mt-8' />
+                        <input type="submit" className='px-7 py-1 bg-sky-400 text-white rounded mt-8' />
                     </form>
                 </div>
 
 
 
-                <div className='bg-none mx-20 text-green-700 mt-40'>
-                    <h3 className='text-xl text-blue-600 pt-8 pb-5 mb-5 border-b border-blue-600'>{brandname} {location}</h3>
+                <div className='bg-none mx-20 mt-40'>
+                    <h3 className='text-xl divheadingblack pt-8 pb-5 mb-5 border-b border-black'>{brandname} {location}</h3>
                     <p>
                         {address} {location} {state} {pincode} <br />
                         Email: <Link to="https://accounts.google.com" className='text-blue-600' href="#email">{email}</Link> <br />

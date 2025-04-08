@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Nav from './navbarEcom'
+import Nav from '../navbar'
 import Footer from '../footer'
 import img from '../../assets/jpg/capsule.jpg'
 

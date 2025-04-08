@@ -6,11 +6,11 @@ function sevices_card(props) {
     const about = props.data.p;
     return (
 
-        <div className='bg-sky-500 overflow-hidden p-2 my-3 inline-flex gap-5 rounded-lg w-full'>
+        <div className='div overflow-hidden p-2 my-3 inline-flex gap-5 rounded-lg w-full'>
             <img src={img} alt="" className='rounded-lg h-32 w-32' />
             <div>
-                <h1 className='font-bold text-blue-950'>{heading}</h1>
-                <p className='text-white'>{about}</p>
+                <h1 className=' divheadingblack'>{heading}</h1>
+                <p className=''>{about}</p>
             </div>
         </div>
         // <div className='py-5 w-62 h-fit bg-green-100 m-5 p-3 rounded-xl hover:bg-green-200 hover:border-green-600 hover:border-2'>

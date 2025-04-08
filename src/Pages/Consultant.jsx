@@ -65,7 +65,7 @@ function Consultant() {
 
   return (
     <>
-      <main className='bg-sky-200'>
+      <main className=''>
       <Nav />
         <article className='h-fit bg-cover mb-30' style={{backgroundImage: `url(${blue})`}}>
           <div className='py-10 text-center'>
@@ -77,44 +77,44 @@ function Consultant() {
           </div>
 
           <div className='inline-flex gap-5 px-24 mb-5 mt-20'>
-            <div className='inline-flex w-1/2 bg-purple-100 rounded-4xl p-5'>
+            <div className='inline-flex w-1/2 label rounded-4xl p-5'>
               <div className='w-1/2'>
                 <h3 className='text-lg font-semibold'>Join affiliate program</h3><br />
                 <h3 className='text-xl font-bold mb-24'>Join affiliate program, get fat comission, 20% as usual.</h3><br />
-                <Link to='/signup' className='py-2 font-bold hover:animate-pulse text-white px-10 bg-black border-2 border-black rounded-4xl w-50 content-center'>Join now</Link>
+                <Link to='/signup' className='py-2 font-bold hover:animate-pulse text-white button px-10 rounded-4xl w-50 content-center'>Join now</Link>
               </div>
               <img src={consultant1} alt="" className='w-1/2 h-full rounded-r-4xl' />
             </div>
 
-            <div className='inline-flex w-1/2 bg-purple-100 rounded-4xl p-5'>
+            <div className='inline-flex w-1/2 label rounded-4xl p-5'>
               <div className='w-1/2'>
                 <h3 className='text-lg font-semibold'>Join affiliate program</h3><br />
                 <h3 className='text-xl font-bold mb-24'>Join affiliate program, get fat comission, 20% as usual.</h3><br />
-                <Link to='/signup' className='py-2 font-bold hover:animate-pulse text-white px-10 bg-black border-2 border-black rounded-4xl w-50 content-center'>Join now</Link>
+                <Link to='/signup' className='py-2 font-bold hover:animate-pulse px-10 button text-white rounded-4xl w-50 content-center'>Join now</Link>
               </div>
               <img src={consultant2} alt="" className='w-1/2 h-full rounded-r-4xl' />
             </div>
           </div>
 
           <div className='inline-flex gap-5 px-24 mt-6 mb-20 w-full'>
-            <div className='w-1/3 bg-purple-100 rounded-4xl'>
+            <div className='w-1/3 label rounded-4xl'>
               <h3 className='text-lg font-bold p-5 w-2/3'>Subscribe and get maximum discount 90% off</h3>
               <div className='flex justify-between px-10 items-center'>
-                <Link to='/signup' className=' font-bold text-white hover:animate-ping bg-black border-2 border-black rounded-4xl w-10 h-10 text-center content-center'>&rarr;</Link>
+                <Link to='/signup' className=' font-bold text-white hover:animate-pulse button rounded-4xl w-10 h-10 text-center content-center'>&rarr;</Link>
                 <img src={consultant3} alt="" className='w-2/3 h-30 rounded-xl' />
               </div>
             </div>
-            <div className='w-1/3 bg-purple-100 rounded-4xl'>
+            <div className='w-1/3 label rounded-4xl'>
               <h3 className='text-lg font-bold p-5 w-2/3'>Subscribe and get maximum discount 90% off</h3>
               <div className='flex justify-between px-10 items-center'>
-                <Link to='/signup' className=' font-bold text-white hover:animate-ping bg-black border-2 border-black rounded-4xl w-10 h-10 text-center content-center'>&rarr;</Link>
+                <Link to='/signup' className=' font-bold text-white hover:animate-pulse button rounded-4xl w-10 h-10 text-center content-center'>&rarr;</Link>
                 <img src={consultant4} alt="" className='w-2/3 h-30 rounded-xl' />
               </div>
             </div>
-            <div className='w-1/3 bg-purple-100 rounded-4xl p-5'>
+            <div className='w-1/3 label rounded-4xl p-5'>
               <h3 className='text-lg font-bold w-2/3 mb-10'>Subscribe and get maximum discount 90% off</h3>
               <input type="email" className='w-full h-10 rounded-4xl py-2 px-5 bg-white text-black-300 mb-10 outline-none' placeholder='Your email address' />
-              <Link to='/signup' className='py-2 font-bold hover:animate-pulse text-white px-10 bg-black border-2 border-black rounded-4xl w-50 content-center'>Subscribe</Link>
+              <Link to='/signup' className='py-2 font-bold hover:animate-pulse px-10 button text-white rounded-4xl w-50 content-center'>Subscribe</Link>
             </div>
           </div>
 
@@ -122,7 +122,7 @@ function Consultant() {
 
         <section className="px-24 space-y-20">
           {/* Doctor Timetable */}
-          <div className="bg-sky-500 pb-10 text-white">
+          <div className="bg-indigo-900 pb-10 text-white">
             <h1 className="px-5 text-2xl bg-white p-3 text-black">Doctors' Timetable</h1>
             <div className="inline-flex flex-col sm:flex-row w-full p-5 ml-5">
               <div className="sm:w-1/2 p-5">
@@ -143,12 +143,12 @@ function Consultant() {
           </div>
 
           {/* Book & Manage Appointments */}
-          <div className="h-fit bg-sky-200 p-8">
-            <div className="max-w-4xl mx-auto bg-sky-100 p-6 rounded-lg shadow-2xl mb-10 shadow-sky-300">
-              <h1 className="text-3xl font-bold text-center mb-6">Appointment Booking</h1>
+          <div className="h-fit p-8">
+            <div className="form max-w-4xl mx-auto p-6 rounded-lg shadow-2xl mb-10 shadow-teal-300">
+              <h1 className="divheadingblack text-3xl font-bold text-center mb-6">Appointment Booking</h1>
               {!isBooking 
               ? (<>
-                  <button onClick={() => setIsBooking(true)} className="w-full bg-blue-400 text-white py-2 rounded-lg hover:bg-blue-600 mb-4">Book an Appointment</button>
+                  <button onClick={() => setIsBooking(true)} className="w-full button text-white py-2 rounded-lg hover:animate-pulse mb-4">Book an Appointment</button>
                   <AppointmentList appointments={appointments} onCancelAppointment={handleCancelAppointment}/>
                 </>) 
               : (<AppointmentForm onAddAppointment={handleAddAppointment} />)}
