@@ -16,6 +16,7 @@ import Showmore from './Components/Ecom/showmore_item.jsx'
 import AtoCart from './Components/Ecom/addtocart.jsx'
 import Buy from './Components/Ecom/buy.jsx'
 import Details from './Components/Ecom/details.jsx'
+import ChatPage from './Components/Chatbot/Chatpage.jsx'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 
 function App() {
@@ -53,6 +54,7 @@ function App() {
       { path: "/addtocart", element: <AtoCart info = {basicinfo} />},
       { path: "/buy", element: <Buy info = {basicinfo} />},
       { path: "/details", element: <Details info = {basicinfo} />},
+      { path: "/chatpage", element: <ChatPage/>}
     ]
   );
 

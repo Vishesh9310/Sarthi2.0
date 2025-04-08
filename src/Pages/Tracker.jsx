@@ -3,7 +3,7 @@ import Nav from '../Components/navbar';
 import Footer from '../Components/footer';
 import Label from '../Components/label';
 import { Line } from 'react-chartjs-2';
-import chatbot from '../assets/jpg/chatbot.jpg';
+import Chatbot from '../Components/Chatbot/chatbot'
 import 'chart.js/auto';
 
 function Tracker() {
@@ -101,9 +101,7 @@ function Tracker() {
       </main>
 
       {/* Chatbot Icon */}
-      <div className='fixed bottom-5 right-5'>
-        <img src={chatbot} alt="Chatbot" className='rounded-full h-14 cursor-pointer shadow-lg animate-pulse' />
-      </div>
+      <Chatbot/>
 
       <Label />
       <Footer />

@@ -5,6 +5,7 @@ import team_pic from '../assets/jpg/group2.jpg'
 import tracker from '../assets/png/tracker.png'
 import consultant from '../assets/png/consultant.png'
 import shopping from '../assets/png/cart.png'
+import Chatbot from '../Components/Chatbot/chatbot'
 
 import tracker_icon from '../assets/icons/book-of-black-cover-closed.png'
 import consultant_icon from '../assets/icons/consultant.png'
@@ -100,7 +101,7 @@ function Home(props) {
 
             </section>
             </div>
-
+            <Chatbot/>
             <Label/>
             <Footer />
        
