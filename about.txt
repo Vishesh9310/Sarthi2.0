@@ -54,8 +54,6 @@ white background with green text
 
 
 
-
-//slider
 //chatbot ka logic
 
 
