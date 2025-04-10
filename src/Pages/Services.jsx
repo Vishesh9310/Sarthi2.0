@@ -1,7 +1,8 @@
 import React from 'react'
 import Nav from '../Components/navbar'
 import Footer from '../Components/footer'
-import Card from '../Components/sevices_card'
+import Card1 from '../Components/services_card1'
+import Card2 from '../Components/services_card2'
 import { Link } from 'react-router-dom'
 import Label from '../Components/label'
 import logo1 from '../assets/jpg/logo1.jpg'
@@ -52,17 +53,17 @@ function Services(props) {
           </div> */}
 
           <div className='w-full mt-10'>
-            <Card data={data1} />
-            <Card data={data2} />
-            <Card data={data3} />
-            <Card data={data4} />
-            <Card data={data5} />
-            <Card data={data6} />
-            <Card data={data7} />
-            <Card data={data8} />
-            <Card data={data9} />
-            <Card data={data10} />
-            <Card data={data11} />
+            <Card1 data={data1} />
+            <Card2 data={data2} />
+            <Card1 data={data3} />
+            <Card2 data={data4} />
+            <Card1 data={data5} />
+            <Card2 data={data6} />
+            <Card1 data={data7} />
+            <Card2 data={data8} />
+            <Card1 data={data9} />
+            <Card2 data={data10} />
+            <Card1 data={data11} />
           </div>
         </div>
 

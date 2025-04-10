@@ -22,11 +22,10 @@
 .div{
   background-color: white;
   color: #009688;
-  border: 3px solid black;
 }
 
 :hover.ele{
-  background-color: #009688;
+  background-color: #43eedd;
   color: white;
 }
 

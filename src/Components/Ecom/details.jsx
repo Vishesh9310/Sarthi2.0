@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { isCookie, Link } from 'react-router-dom'
 import image from '../../assets/jpg/batsy.jpg'
 import Nav from '../navbar'
 import Footer from '../footer'
@@ -16,6 +16,20 @@ function details() {
     const return_duration = 7;
     const isCOD = true;
     const description = "about deatils";
+
+    const  dataObj= {
+     img : image,
+     color : "Black",
+     product_name : "K' Footlance Sneakers For Men",
+     rate : 3.6,
+     discount : 51,
+     isdeliveryfree : true,
+     delivery_date : "7 april, monday",
+     isreturn : true,
+     return_duration : 7,
+     isCOD : true,
+     description : "about deatils",
+     };
 
     return (
         <>
@@ -45,8 +59,11 @@ function details() {
             </main>
 
             <div className='w-full px-24 py-10 bg-blue-50 grid grid-cols-2 gap-10 text-center text-white font-bold'>
-                <Link to='/addtocart' className='bg-blue-300 p-5 rounded-lg hover:animate-pulse shadow-lg shadow-gray-400'>Add to Cart</Link>
-                <Link to='/buy' className='button p-5 rounded-lg hover:animate-pulse shadow-lg shadow-gray-400'>Buy Now</Link>
+                {/* <Link to='/addtocart' className='bg-blue-300 p-5 rounded-lg hover:animate-pulse shadow-lg shadow-gray-400'>Add to Cart</Link>*/}
+                <button className='bg-blue-300 p-5 rounded-lg hover:animate-pulse shadow-lg shadow-gray-400'>Add to Cart</button> 
+                {/* add to cart wale me functionality lagegi ki add to aarray product ho jaye na ki new page open ho */}
+                <Link to='/shippingform' state={{data: dataObj}} className='button p-5 rounded-lg hover:animate-pulse shadow-lg shadow-gray-400'>Buy Now</Link>
+            
             </div>
 
             <Footer/>

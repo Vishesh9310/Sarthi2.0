@@ -75,7 +75,7 @@ function Ecom() {
             <div className='px-24 py-10'>
               <div className='flex justify-between'>
                 <h1 className='divheadingblack text-4xl font-bold w-1/4'>Todays best deals for you!</h1>
-                <Link to='/showmore' className='divheadingblack font-bold'>SEE ALL PRODUCTS &rarr;</Link>
+                {/* <Link to='/showmore' className='divheadingblack font-bold'>SEE ALL PRODUCTS &rarr;</Link> */}
               </div>
 
               <div className='grid grid-cols-4 mt-5'>
@@ -120,7 +120,7 @@ function Ecom() {
 
               <div className='flex justify-between'>
                 <h1 className='text-4xl font-bold w-1/4 divheadingblack'>Trending Products for You!</h1>
-                <Link to='/showmore' className='divheadingblack font-bold'>SEE ALL PRODUCTS &rarr;</Link>
+                {/* <Link to='/showmore' className='divheadingblack font-bold'>SEE ALL PRODUCTS &rarr;</Link> */}
               </div>
 
               <div className='grid grid-cols-4 mt-5'>
