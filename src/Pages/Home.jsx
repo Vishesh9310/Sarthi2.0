@@ -12,7 +12,6 @@ import { Link } from 'react-router-dom'
 import slide1 from '../assets/icons/doctors.jpg'
 import slide2 from '../assets/jpg/banner5.jpg'
 import slide3 from '../assets/jpg/capsule2.jpg'
-import Form from '../Components/Admin/form'
 
 function Home(props) {
     const brandname = props.info.brand;
@@ -46,7 +45,6 @@ function Home(props) {
     return (
         <>
 
-<Form/>
             {/* <Color/> */}
             <Nav />
             <div className='px-20'>

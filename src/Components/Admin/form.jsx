@@ -10,7 +10,6 @@ function form() {
         P_name: '',
         P_desc: '',
         image: null,
-        color: '',
         rate: '',
         discount: '',
         delivery_date: '',
