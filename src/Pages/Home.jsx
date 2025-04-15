@@ -12,6 +12,7 @@ import { Link } from 'react-router-dom'
 import slide1 from '../assets/icons/doctors.jpg'
 import slide2 from '../assets/jpg/banner5.jpg'
 import slide3 from '../assets/jpg/capsule2.jpg'
+import Form from '../Components/Admin/form'
 
 function Home(props) {
     const brandname = props.info.brand;
@@ -45,6 +46,7 @@ function Home(props) {
     return (
         <>
 
+<Form/>
             {/* <Color/> */}
             <Nav />
             <div className='px-20'>
@@ -129,7 +131,7 @@ function Home(props) {
                         {slides.map((slide, index) => (
                             <div key={index} className={`absolute inset-0 w-full h-full transition-opacity duration-1000 flex flex-col items-center justify-center ${current === index ? "opacity-100" : "opacity-0"     }`}>
                                 <img src={slide.img} alt={slide.desc} className="w-full h-full object-cover"/>
-                                <div className="absolute bottom-4 bg-indigo-800 bg-opacity-50 text-white text-lg font-semibold px-4 py-1 rounded">
+                                <div className="absolute bottom-4 bg-teal-800 bg-opacity-50 text-white text-lg font-semibold px-4 py-1 rounded">
                                     {slide.desc}
                                 </div>
                             </div>

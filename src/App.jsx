@@ -17,6 +17,7 @@ import Buy from './Components/Ecom/buy.jsx'
 import Details from './Components/Ecom/details.jsx'
 import ChatPage from './Components/Chatbot/Chatpage.jsx'
 import ShippingForm from './Components/Ecom/ShippingForm.jsx'
+import AdminForm from './Components/Admin/form.jsx'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 
 function App() {
@@ -55,6 +56,7 @@ function App() {
       { path: "/details", element: <Details info = {basicinfo} />},
       { path: "/chatpage", element: <ChatPage/>},
       { path: "/shippingform", element: <ShippingForm info = {basicinfo}/>},
+      { path: "/formadmin", element: <AdminForm/>}
     ]
   );
 
