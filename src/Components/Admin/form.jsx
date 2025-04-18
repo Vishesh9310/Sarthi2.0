@@ -43,7 +43,7 @@ function form() {
             <Nav />
 
             <div className="h-fit p-8">
-                <div className="form max-w-4xl mx-auto p-6 rounded-lg shadow-2xl mb-10 shadow-teal-300">
+                <div className="form max-w-4xl mx-auto p-6 rounded-lg shadow-2xl mb-10 shadow-sky-300">
                     <h1 className="divheadingblack text-3xl font-bold text-center mb-6">ADMIN PAGE: DATA UPLOADING PAGE</h1>
                     <div className="h-fit backg_teal w-200 ">
                         <form onSubmit={handleSubmit} className="mt-3 p-5 space-y-5">

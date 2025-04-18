@@ -14,7 +14,7 @@ function navbar() {
     const brandname = "Sarthi";
 
     return (
-        <nav className="inline-flex justify-between w-full px-4 sm:px-24 h-fit bg-white text-teal-500 sticky top-0">
+        <nav className="inline-flex justify-between w-full px-4 sm:px-24 h-fit bg-sky-100 text-sky-600 sticky top-0">
             {/* Logo Section */}
             <div className="inline-flex w-1/3 p-1 h-20">
                 <img src={logo} alt="logo" className="h-14 self-center" />
@@ -48,8 +48,8 @@ function navbar() {
                     <li className="w-fit">
                         {isloggedin
                             && <div className="inline-flex gap-2">
-                                <Link to="/signup" className="nav-item bg-teal-500 hover:bg-sky-300 px-4 py-1 rounded text-white ">SignUp</Link>
-                                <Link to="/login" className="nav-item bg-teal-500 hover:bg-sky-300 px-4 py-1 rounded text-white ">Login</Link>
+                                <Link to="/signup" className="nav-item bg-sky-500 hover:bg-sky-300 px-4 py-1 rounded text-white ">SignUp</Link>
+                                <Link to="/login" className="nav-item bg-sky-500 hover:bg-sky-300 px-4 py-1 rounded text-white ">Login</Link>
                               </div>
                         }
                     </li>

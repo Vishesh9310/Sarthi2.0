@@ -2,31 +2,39 @@
   margin: 0px;
   padding: 0px;
   color: white;
-  background-color: #009688;
+  background-color: #9EECFF;
 }
+
+/*
+D2F7FF
+9EECFF
+69E2FF
+35D7FF
+00CCFF
+*/
 
 .bg{
   background-color: white;
 }
 
 .backg_teal{
-  background-color: #009688;
-  color: white;
+  background-color: #9EECFF;
+  color: black;
 }
 
 .form{
   background-color: white;
-  color: #009688;
+  color: #35D7FF;
 }
 
 .div{
   background-color: white;
-  color: #009688;
+  color: #35D7FF;
 }
 
 :hover.ele{
-  background-color: #43eedd;
-  color: white;
+  background-color: #35D7FF;
+  color: black;
 }
 
 .divheadingblack{
@@ -35,7 +43,7 @@
 }
 
 .button{
-  background-color: #312e81;
+  background-color: #35D7FF;
 }
 
 .button_border{
@@ -45,10 +53,10 @@
 
 .label{
   background-color: white;
-  color: #009688;
+  color: #35D7FF;
 }
 
 .footer{
-  background-color: #009688;
-  color: white;
+  background-color: #35D7FF;
+  color: black;
 }

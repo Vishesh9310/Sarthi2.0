@@ -53,8 +53,8 @@ function Home(props) {
                         <div className='justify-between inline-flex h-fit px-24'>
                             <div className='w-1/2 h-fit py-20 pr-20 '>
                                 <Link to="/experience" className='w-fit bg-sky-400 hover:bg-sky-300 px-4 py-1 rounded text-white'>Experience</Link>
-                                <p className='font-bold text-6xl pt-2'>{h1head}</p>
-                                <p className='leading-snug pt-6 italic'>
+                                <p className='font-bold text-6xl pt-2 text-black'>{h1head}</p>
+                                <p className='leading-snug pt-6 italic text-gray-600'>
                                     Discover expert fitness advice, top-quality health products, and personalized wellness
                                     plans all in one place. Wheather you're looking to enhance your fitness routine or shop for premium health essentials, <span className='text-green-900 font-bold leading-'>{brandname}</span> is
                                     here to support your journey to a healthier lifestyle. Start today and take the first step towards a better you!
@@ -67,7 +67,7 @@ function Home(props) {
                         </div>
 
 
-                        <div className='div inline-flex justify-between gap-5 w-full p-3 rounded-lg'>
+                        <div className='bg-sky-50 shadow-md shadow-sky-300 text-sky-500 inline-flex justify-between gap-5 w-full p-3 rounded-lg'>
                             <div className='w-1/4 inline-flex p-1'>
                                 <img src={tracker_icon} alt="hello" className='h-14 self-center' />
                                 <div className='w-fit px-2 content-center'>
@@ -98,8 +98,9 @@ function Home(props) {
                             </div>
                         </div>
                     </div>
+                
 
-                    <div className='div inline-flex'>
+                    <div className='bg-sky-50 shadow-md shadow-sky-300 text-sky-500 inline-flex'>
                         <Link to="/fitness" className='bg-none ele h-fit w-1/3 pl-24 pr-4 pb-6'>
                             <img src={tracker_icon} alt="hello" className='h-20 w-20 p-2' />
                             <h2 className='divheadingblack font-bold text-3xl py-3'>Fitness tracker</h2>
@@ -129,7 +130,7 @@ function Home(props) {
                         {slides.map((slide, index) => (
                             <div key={index} className={`absolute inset-0 w-full h-full transition-opacity duration-1000 flex flex-col items-center justify-center ${current === index ? "opacity-100" : "opacity-0"     }`}>
                                 <img src={slide.img} alt={slide.desc} className="w-full h-full object-cover"/>
-                                <div className="absolute bottom-4 bg-teal-800 bg-opacity-50 text-white text-lg font-semibold px-4 py-1 rounded">
+                                <div className="absolute bottom-4 bg-sky-600 bg-opacity-50 text-white text-lg font-semibold px-4 py-1 rounded">
                                     {slide.desc}
                                 </div>
                             </div>
